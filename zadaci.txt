@@ -1,0 +1,30 @@
+welcome:
+
+sponzori
+3 slike za shop
+slike za z10 teams - dobra rezolucija
+
+creators:
+
+slika umesto "Our team"
+
+stranica za svaki tim posebno:(lol, valorant, valorant akademija, csgo, tft):
+
+slika koja ce biti pre rostera
+slike svih igraca + stuff team-a 
+upcoming and past results
+
+stranica za sponzore:
+
+bukvalno dve kartice slika levo text desno
+sponzori(pomodoro, biobar)
+
+about: 
+ne znam sta bi ovde mogli da stavimo ali pitacemo hebija
+
+news stranica:
+
+Poslednja vest ce biti malo veca i gore na pocetku stranice a pored toga ce biti past/upcoming results a ispod toga ce biti vesti tj paginacija da se pokaze 10 poslednjih vesti :D
+ispod toga ono za newsletter footer i tjt
+
+
