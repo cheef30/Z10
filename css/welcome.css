@@ -1,0 +1,128 @@
+body{
+  background-color: #101010;
+}
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #101010;
+  }
+
+  .section .text-na-sredini-videa{
+    color: white;
+    position:relative;
+    text-align: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: "Cookie";
+    padding: 20px;
+    margin: 15px;
+    z-index: 1;
+    top: 20%;
+  }
+  .section .text-na-sredini-videa .ispod{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 15px;
+    justify-content: space-between;
+  }
+  
+  .section .text-na-sredini-videa .ispod button{
+    margin-left:20px;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 50%;
+    color: white;
+    font-weight:bold;
+    box-shadow: 10px 5px 5px rgb(255, 255, 255);
+    transition: all ease-in-out 0.3s;
+  }
+  .section .text-na-sredini-videa .ispod button:hover{
+    cursor: pointer;
+    background-color: red;
+    box-shadow: -10px 5px 5px red;
+  }
+  
+  .video-container {
+    position: absolute;
+    background-size: cover;
+    background-color: #101010;
+  }
+  
+  .color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+  }
+
+
+
+
+  .sponsors{
+    width: 100%;
+    height: 70vh;
+    background-color: blue;
+  }
+
+
+
+  .teams{
+    width: 100%;
+    height: 70vh;
+    background-color: #101010;
+    color: white;
+}
+.teams h1{
+    position: relative;
+    font-weight: bold;
+    top: 50px;
+    width: max-content;
+    left: 200px;
+}
+
+.teams .team{
+    position: relative;
+    background-color: #101010;
+    width: 80%;
+    height: 75%;
+    top: 15%;
+    left: 10%;
+    display: flex;
+}
+.teams .team .team-card{
+    background-color: blue;
+    width: 18%;
+    border: 1px solid red;
+    margin: 2% 2% 2% 0;
+}
+.teams .team .team-card:first-child{
+    margin-left: 2%;
+}
+.teams .team .team-card img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.shop{
+    width: 100%;
+    height: 70vh;
+    background-color: black;
+    color: white;
+}
+
+
