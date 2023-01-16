@@ -8,7 +8,7 @@ creators:
 
 slika umesto "Our team"
 
-stranica za svaki tim posebno:(lol, valorant, valorant akademija, csgo, tft):
+stranica za svaki tim posebno:(lol, valorant, csgo, tft):
 
 slika koja ce biti pre rostera
 slike svih igraca + stuff team-a 

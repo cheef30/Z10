@@ -1,0 +1,79 @@
+body{
+    background-color: #101010;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    top: 0;
+}
+
+.imageDiv{
+    position: relative;
+    border: 1px solid red;
+    width: 100%;
+    height: 250px;
+    margin-top: 80px;
+}
+
+.sponsors{
+    width: 100%;
+    height: 70vh;
+    align-items: center;
+    padding: 50px 0px 50px 0px;
+}
+
+.sponsors .sponsor{
+    position: relative;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    left: 10%;
+}
+
+.sponsors .sponsor .logo{
+    position: relative;
+    width: 35%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    top: 5%;
+    padding-left: 10px;
+}
+
+.sponsors .sponsor .logo img{
+    width: 45%;
+    position: relative;
+    top: 3.5%;
+    left: 20%;
+}
+
+.sponsors .sponsor .info{
+    width: 65%;
+    height: 90%;
+    position: relative;
+    top: 5%;
+    padding-left: 10px;
+}
+
+.sponsors .sponsor .info h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    width: max-content;
+    color: whitesmoke;
+    background-color: #101010;
+}
+
+.sponsors .sponsor .info p{
+    background-color: #101010;
+    color: whitesmoke;
+    text-align: left;
+    font-size: 18px;
+    font-family: serif;
+}
+
+.sponsors .sponsor .info p a{
+    color: aliceblue;
+    position: relative;
+    top: 20px;
+}
