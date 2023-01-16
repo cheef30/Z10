@@ -52,23 +52,23 @@ body{
 }
 
 .teamSection .roster .igrac .jedan{
-    background-image: url(/images/nemanja2.png);
+    background-image: url(../images/nemanja2.png);
 }
 
 .dva{
-    background-image: url(/images/cjoffo1.png);
+    background-image: url(../images/cjoffo1.png);
 }
 .tri{
-    background-image: url(/images/fajkus1.png);
+    background-image: url(../images/fajkus1.png);
 }
 .cetri{
-    background-image: url(/images/brutmonster1.png);
+    background-image: url(../images/brutmonster1.png);
 }
 .pet{
-    background-image: url(/images/avnn1.png);
+    background-image: url(../images/avnn1.png);
 }
 .sest{
-    background-image: url(/images/simke1.png);
+    background-image: url(../images/simke1.png);
 }
 
 .igrac:hover div{
@@ -156,3 +156,4 @@ body{
 #drugi{
     top: -100px;
 }
+twitch.tv/sef30
