@@ -8,7 +8,7 @@ creators:
 
 slika umesto "Our team"
 
-stranica za svaki tim posebno:(lol, valorant, csgo, tft):
+stranica za svaki tim posebno:( valorant, tft):
 
 slika koja ce biti pre rostera
 slike svih igraca + stuff team-a 
@@ -16,8 +16,7 @@ upcoming and past results
 
 stranica za sponzore:
 
-bukvalno dve kartice slika levo text desno
-sponzori(pomodoro, biobar)
+ostalo samo da se ubaci logo pomodora
 
 about: 
 ne znam sta bi ovde mogli da stavimo ali pitacemo hebija

@@ -1,0 +1,158 @@
+body{
+    background-color: #101010;
+}
+.teamSection{
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+.teamSection h1{
+    font-weight: bold;
+    font-size: 50px;
+    position: relative;
+    align-items: center;
+    top: 50px;
+    color: #fff;
+}
+.teamSection h1 span{
+    color: #d41f2e ;
+}
+.teamSection .roster{
+    width: 100%;
+    height: 90%;
+    position: relative;
+    justify-content: center;
+    top: 5%;
+    display: flex;
+}
+.teamSection .roster .igrac{
+    position: relative;
+    width: 350px;
+    height: 70%;
+    top: 15%;
+    margin-left: 50px;
+    opacity: 1;
+    transform: skew(-5deg);
+    text-align: center;
+}
+.roster div{
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.3s;
+  }
+
+.teamSection .roster .igrac .slika{
+    visibility: visible;
+    background-color: #101010;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -9999;
+}
+
+.teamSection .roster .igrac .jedan{
+    background-image: url(../images/lol1.png);
+}
+
+.dva{
+    background-image: url(../images/lol2.png);
+}
+.tri{
+    background-image: url(../images/lol3.png);
+}
+.cetri{
+    background-image: url(../images/lol4.png);
+}
+.pet{
+    background-image: url(../images/lol5.png);
+}
+.sest{
+    background-image: url(../images/csgo_silhouette.png);
+}
+
+.igrac:hover div{
+    visibility: visible;
+    opacity: 1;
+    color: black;
+    z-index: 999999;
+}
+
+.teamSection .roster .igrac .bloor{
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.765) ;
+    top: -100%;
+    transform: 0.3s;
+}
+
+.teamSection .roster .igrac:hover .bloor{
+    visibility: visible;
+    opacity: 1;
+}
+
+.teamSection .roster .igrac .name{
+    position: relative;
+    top: -170%;
+    font-weight: bold;
+    font-size: 40px;
+    transform: skew(5deg);
+}
+
+.teamSection .roster .igrac .position{
+    position: relative;
+    top: -168%;
+    font-size: 20px;
+    font-weight: bold;
+    transform: skew(5deg);
+}
+.teamSection .roster .igrac .info{
+    position: relative;
+    top: -167%;
+    font-size: 15px;
+    font-weight: bold;
+    transform: skew(5deg);
+}
+
+.teamSection .roster .igrac .socials{
+    position: relative;
+    background-color: red;
+    height: 50px;
+    top: -122%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamSection .roster .igrac .socials ul{
+    display: flex;
+    transform: skew(5deg);
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamSection .roster .igrac .socials ul li{
+    position: relative;
+    list-style: none;
+    padding: 15px;
+    transform: skew(5deg);
+}
+
+.teamSection .roster .igrac .socials ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+    transition: 0.3s;
+    z-index: 999;
+    transform: skew(5deg);
+}
+
+#drugi{
+    top: -100px;
+}

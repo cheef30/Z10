@@ -1,0 +1,184 @@
+body{
+    background-color: #101010;
+}
+
+.mainNews{
+    color: white;
+    display: flex;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 70vh;
+}
+.mainNews p{
+    font-size: 15px;
+    color: white;
+}
+
+.mainNews .lastNew{
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+.mainNews .lastNew .image{
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+}
+.mainNews .lastNew .image img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.mainNews .lastNew .image h1{
+    position: relative;
+    top: -12%;
+    left: 5%;
+}
+
+
+.mainNews .latest{
+    position: relative;
+    width: 40%;
+    height: 100%;
+}
+
+.mainNews .latest .matches{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+    color: black;
+    font-weight: bold;
+
+}
+.mainNews .matches .buttons{
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+.mainNews .matches .buttons button{
+    position: relative;
+    width: 49%;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid red;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+#upcomingBtn{
+    border-bottom: 3px solid red;
+}
+
+.mainNews .matches .upcoming{
+    background-color: #101010;
+    position: relative;
+    width: 95%;
+    height: 70%;
+    top: 10%;
+    left: 2.5%;
+    display: block;
+}
+
+.mainNews .matches .upcoming .matchInfo{
+    position: relative;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    border: 1px solid white;
+    border-bottom: none;
+}
+.mainNews .matches .upcoming .slicice_dugme{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 25%;
+    border: 1px solid white;
+    border-top: none;
+}
+.mainNews .matches .upcoming .slicice_dugme .slicice{
+    width: 75%;
+    height: 100%;
+}
+.mainNews .matches .upcoming .slicice_dugme .dugme{
+    width: 35%;
+    height: 100%;
+}
+.mainNews .matches .upcoming .matchInfo .left{
+    position: relative;
+    width: 70%;
+}
+.mainNews .matches .upcoming .matchInfo .right{
+    position: relative;
+    width: 30%;
+    color: white;
+}
+
+
+
+.mainNews .matches .pastRes{
+    background-color: #101010;
+    position: relative;
+    width: 95%;
+    height: 70%;
+    top: 10%;
+    left: 2.5%;
+}
+
+.mainNews .matches .pastRes .matchInfo{
+    position: relative;
+    width: 100%;
+    height: 25%;
+    display: flex;
+}
+.mainNews .matches .pastRes .slicice_dugme{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 25%;
+}
+.mainNews .matches .pastRes .slicice_dugme .slicice{
+    width: 75%;
+    height: 100%;
+}
+.mainNews .matches .pastRes .slicice_dugme .dugme{
+    width: 35%;
+    height: 100%;
+}
+.mainNews .matches .pastRes .matchInfo .left{
+    position: relative;
+    width: 70%;
+}
+.mainNews .matches .pastRes .matchInfo .right{
+    position: relative;
+    width: 30%;
+    color: white;
+}
+
+
+
+
+
+.pastRes{
+    display: none;
+}
+
+
+
+
+.newsletter{
+    position: relative;
+    top: 100px;
+}
+
+footer{
+    position: relative;
+    top: 100px;
+}

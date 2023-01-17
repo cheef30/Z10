@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
-   <title>Document</title>
-<link rel="stylesheet" href="../css/sponsors.css">
+
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/newsletter.css">
-    
+    <link rel="stylesheet" href="../css/news.css">
 </head>
 <body>
     <header>
@@ -33,30 +33,84 @@
         </nav>
     </header>
 
-    <div class="imageDiv">
-        <h1>Ovde ce stajati slika umesto texta</h1>
-    </div>
-
-    <div class="sponsors">
-        <div class="sponsor" id="pomodoro">
-            <div class="logo">Ovde ce biti logo</div>
-            <div class="info">
-                <br>
-                <h1>Pomodoro</h1><br>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus perferendis saepe iusto aliquam. Dolorum, temporibus velit! Beatae ex vel est iure a magnam et ut, cumque animi, amet error adipisci!</p>
-                <br>
-                <p><a href="#">www.pomodoro.com</a></p>
+    <div class="mainNews">
+        <div class="lastNew">
+            <div class="image">
+                <img src="../images/csgo.jpg" alt="">
+                <h1>Ovo ce biti naslov videa</h1>
             </div>
         </div>
-        <div class="sponsor" id="biobar">
-            <div class="logo"><img src="../images/Biobar.png" alt=""></div>
-            <div class="info">
-                <br>
-                <h1>Biobar</h1>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quod numquam voluptatibus laborum, assumenda nesciunt quasi corrupti non possimus atque! Error deleniti nihil blanditiis a nobis quidem sit explicabo velit?</p>
-                <br>
-                <p><a href="#">www.biobar.com</a></p>
+
+        <div class="latest">
+
+        
+            <div class="matches">
+                <div class="buttons">
+                    <button class="upcomingBtn" id="upcomingBtn" onclick="upcoming()">Upcoming</button>
+                    <button class="pasResBtn" id="pasResBtn" onclick="pastRes()">Past results</button>
+                </div>
+                <div class="upcoming" id="upcoming">
+                    <div class="matchInfo">
+                        <div class="left">
+                            <p>Naziv igrice</p>
+                            <p>Naziv takmicenja</p>
+                        </div>
+                        <div class="right">
+                            <p>Tacno nadolazece vreme</p>
+                            <p>Tacan nadolazeci datum</p>
+                        </div>
+                    </div>
+                    <div class="slicice_dugme">
+                        <div class="slicice"><p>Ovde ce biti logoi</p></div>
+                        <div class="dugme"><p>Ovde ce biti dugme</p></div>
+                    </div>
+                    <br>
+                    <div class="matchInfo">
+                        <div class="left">
+                            <p>Naziv igrice</p>
+                            <p>Naziv takmicenja</p>
+                        </div>
+                        <div class="right">
+                            <p>Tacno nadolazece vreme</p>
+                            <p>Tacan nadolazeci datum</p>
+                        </div>
+                    </div>
+                    <div class="slicice_dugme">
+                        <div class="slicice"><p>Ovde ce biti logoi</p></div>
+                        <div class="dugme"><p>Ovde ce biti dugme</p></div>
+                    </div>
+                </div>
+                <div class="pastRes" id="pastRes">
+                    <div class="matchInfo">
+                        <div class="left">
+                            <p>Naziv igrice</p>
+                            <p>Naziv takmicenja</p>
+                        </div>
+                        <div class="right">
+                            <p>Tacno proslo vreme</p>
+                            <p>Tacan prosli datum</p>
+                        </div>
+                    </div>
+                    <div class="slicice_dugme">
+                        <div class="slicice">Ovde ce biti logoi</div>
+                        <div class="dugme">Ovde ce biti dugme</div>
+                    </div>
+                    <br>
+                    <div class="matchInfo">
+                        <div class="left">
+                            <p>Naziv igrice</p>
+                            <p>Naziv takmicenja</p>
+                        </div>
+                        <div class="right">
+                            <p>Tacno proslo vreme</p>
+                            <p>Tacan prosli datum</p>
+                        </div>
+                    </div>
+                    <div class="slicice_dugme">
+                        <div class="slicice">Ovde ce biti logoi</div>
+                        <div class="dugme">Ovde ce biti dugme</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -64,7 +118,8 @@
     <div class="newsletter">
         <form>
             <h1>Join Our Newsletter</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus nemo ullam quasi, facilis quae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus nemo ullam quasi, facilis
+                quae.</p>
             <div class="email-box">
                 <i class="fa-regular fa-envelope"></i>
                 <input class="tbox" type="email" placeholder="Enter your email">
@@ -72,6 +127,7 @@
             </div>
         </form>
     </div>
+
 
     <footer class="footer">
         <div class="container">
@@ -110,12 +166,15 @@
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
     <script src="../js/navbar.js"></script>
+    <script src="../js/news.js"></script>
 </body>
+
 </html>
