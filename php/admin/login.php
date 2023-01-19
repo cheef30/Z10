@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_SESSION['korIme'])) {
+    header('Location: pocetna.php');
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +29,7 @@
 </html>
 <?php
 include_once dirname(__DIR__) . '/funkcije/dohvatanjeBaza.php';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $err = NULL;
     if (isset($_POST['korIme']) && isset($_POST['lozinka'])) {
@@ -32,7 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $err = 'Niste uneli lozinku!';
 
         if (!isset($err) && proveriLogin($korIme, $loz)){
-            header("Location: login.php?err=USPESNO!");
+            session_start();
+            $_SESSION['korIme'] = $korIme;
+            $_SESSION['loz'] = $loz;
+
+            header("Location: pocetna.php");
             exit();
         }
 

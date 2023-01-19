@@ -1,10 +1,16 @@
 <?php
 include dirname(__DIR__) . '/klase/baza/baza.php';
 
-function dohvatiVesti() {
+function dohvatiVesti($str = 1, $velStr = 10) {
     try {
         $baza = new Baza();
-        $rez = $baza->selectAll('select * from VEST order by DATUM_VREME_UNOSA desc');
+
+        $ukupno = $baza->selectOne('select count(*) as ukupno from VEST')['ukupno'];
+        if ($str > $maxStr = round($ukupno / $velStr, 0, PHP_ROUND_HALF_UP))
+            $str = $maxStr;
+
+        $offset = $velStr * ($str - 1);
+        $rez = $baza->selectAll("select * from VEST order by DATUM_VREME_UNOSA desc limit $offset, $velStr");
 
         return $rez;
     }
