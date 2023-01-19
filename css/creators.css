@@ -8,35 +8,6 @@
 body{
     background-color: #101010;
 }
-.team{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.team .team-content{
-    width: 100%;
-    max-width: 1350px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    align-items: center;
-    gap: 2rem;
-    text-align: center;
-    margin-top: 4rem;
-}
-
-.team .team-content img{
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    margin-bottom: 15px;
-}
-
 .center h1{
     color: #fff;
     font-size: 4rem;
@@ -45,35 +16,183 @@ body{
 
 .center img{
     width: 100%;
-    height: 200px;
-    margin-top: 200px;
+    height: 10%;
+    margin-top: 10%;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    max-height: 500px;
+    max-width: 1280px;
+    min-height: 400px;
+    min-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+.border {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    position: relative;
+}
+.card {
+    height: 379px;
+    width: 300px;
+    border-radius: 10px;
+    transition: background 0.8s;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 70px 63px -60px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.card0 {
+    background: url("../images/1.png") center center no-repeat;
+    background-size: 300px;
+}
+.card0:hover {
+    background: url("../images/1.png") left center no-repeat;
+    background-size: 450px;
+}
+.card0:hover h2 {
+    opacity: 1;
+}
+.card0:hover p {
+    opacity: 1;
+}
+.card0:hover .fa {
+    opacity: 1;
+}
+.card1 {
+    background: url("../images/2.png") center center no-repeat;
+    background-size: 300px;
+}
+.card1:hover {
+    background: url("../images/2.png") left center no-repeat;
+    background-size: 500px;
+}
+.card1:hover h2 {
+    opacity: 1;
+}
+.card1:hover p {
+    opacity: 1;
+}
+.card1:hover .fa {
+    opacity: 1;
+}
+.card2 {
+    background: url("../images/3.png") center center no-repeat;
+    background-size: 300px;
+}
+.card2:hover {
+    background: url("../images/3.png") left center no-repeat;
+    background-size: 500px;
+}
+.card2:hover h2 {
+    opacity: 1;
+}
+.card2:hover p {
+    opacity: 1;
+}
+.card2:hover .fa {
+    opacity: 1;
+}
+.card3 {
+    background: url("../images/4.png") center center no-repeat;
+    background-size: 300px;
+}
+.card3:hover {
+    background: url("../images/4.png") left center no-repeat;
+    background-size: 500px;
+}
+.card3:hover h2 {
+    opacity: 1;
+}
+.card3:hover p {
+    opacity: 1;
+}
+.card3:hover .fa {
+    opacity: 1;
+}
+.card4 {
+    background: url("../images/5.png") center center no-repeat;
+    background-size: 300px;
+}
+.card4:hover {
+    background: url("../images/5.png") left center no-repeat;
+    background-size: 500px;
+}
+.card4:hover h2 {
+    opacity: 1;
+}
+.card4:hover p {
+    opacity: 1;
+}
+.card4:hover .fa {
+    opacity: 1;
+}
+.card5 {
+    background: url("../images/5.png") center center no-repeat;
+    background-size: 300px;
+}
+.card5:hover {
+    background: url("../images/5.png") left center no-repeat;
+    background-size: 500px;
+}
+.card5:hover h2 {
+    opacity: 1;
+}
+.card5:hover p {
+    opacity: 1;
+}
+.card5:hover .fa {
+    opacity: 1;
 }
 
-.box{
-    padding: 16px;
-    background: #0b0a0a;
-    border-radius: 15px;
-    transform: all .4s ease;
-}
 
-.box h3{
-    font-size: 23px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 8px;
+h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
 }
-
-.box h5{
-    font-size: 15px;
-    font-weight: 600;
-    color: #b7b4bb;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
+p
+{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+    width: 40%;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
 }
-
+.fa {
+    opacity: 0;
+    transition: opacity 1s;
+    
+}
+.icons {
+    position: absolute;
+    fill: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    height: 130px;
+    top: 226px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 .icons i{
-    display: inline-block;
-    color: #fff;
     font-size: 20px;
     margin: 0 8px;
     transition: all .4s ease;
@@ -82,10 +201,69 @@ body{
 .icons i:hover{
     transform: scale(1.2);
 }
-#prvi{
-    z-index: 1;
+.move
+{
+    padding-top: 100px;
 }
-#drugi{
-    top: -200px;
+.hide1
+{
+    display: block;
 }
+.hide2
+{
+    display: none;
+}
+.hide3
+{
+    display: none;
+}
+.fa
+{
+    color: black;
+}
+@media screen and (max-width: 980px) { 
+.container {
+    height: 100%;
+    width: 100%;
+    max-height: 500px;
+    max-width: 800px;
+    min-height: 400px;
+    min-width: 610px;
 
+}
+    .hide1
+    {
+        display: none;
+    }
+    .hide2
+    {
+        display: block;
+    }
+    .hide3
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 700px) { 
+    .container {
+        height: 100%;
+        width: 100%;
+        max-height: 600px;
+        max-width: 300px;
+        min-height: 400px;
+        min-width: 30px;
+    
+    }
+    .hide1
+    {
+        display: none;
+    }
+    .hide2
+    {
+        display: none;
+    }
+    .hide3
+    {
+        display: block;
+    }
+}
