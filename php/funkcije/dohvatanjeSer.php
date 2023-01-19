@@ -1,6 +1,6 @@
 <?php
 include_once 'dohvatanjeBaza.php';
-include 'serijalizacija.php';
+include_once 'serijalizacija.php';
 
 function dohvatiIgruSer($idIgre){
     return serIgruIzBaze(dohvatiIgru($idIgre));
@@ -20,4 +20,8 @@ function dohvatiTimSer($idTima) {
 
 function dohvatiTakmicenjePoNazivuSer($naziv) {
     return serTakmicenjeIzBaze(dohvatiTakmicenjePoNazivu($naziv));
+}
+
+function dohvatiVestiSer($str, $velStr){
+    return serViseVestiIzBaze(dohvatiVesti($str, $velStr));
 }
