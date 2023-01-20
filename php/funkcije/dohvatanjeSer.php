@@ -23,5 +23,19 @@ function dohvatiTakmicenjePoNazivuSer($naziv) {
 }
 
 function dohvatiVestiSer($str, $velStr){
+    $str = $str ?? 1;
+    $velStr = $velStr ?? 10;
     return serViseVestiIzBaze(dohvatiVesti($str, $velStr));
+}
+
+function dohvatiSveVestiSer() {
+    $rez = dohvatiSveVesti();
+    if (is_bool($rez))
+        return array();
+
+    return serViseVestiIzBaze($rez);
+}
+
+function dohvatiIgreSer() {
+    return serViseIgaraIzBaze(dohvatiIgre());
 }

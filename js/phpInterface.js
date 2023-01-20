@@ -37,12 +37,3 @@ function queryPath(params, query = true) {
     path = path.substring(0, path.length - 1)
     return path
 }
-
-params = {
-    objekat: 'mejl'
-}
-body = {
-    adresa: 'pfilip@gmail.com'
-}
-
-post(body, params)

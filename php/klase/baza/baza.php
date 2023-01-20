@@ -1,5 +1,5 @@
 <?php
-include dirname(__DIR__) . '/../konfiguracija/config.php';
+include_once dirname(__DIR__) . '/../konfiguracija/config.php';
 
 class Baza {
     private $conn;

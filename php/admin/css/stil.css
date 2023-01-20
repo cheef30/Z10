@@ -22,3 +22,27 @@ li a {
 li a:hover {
     background-color: blue;
 }
+
+form input {
+    margin: 5px 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th:not(:last-child), td:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+th, td {
+    text-align: center;
+}
+
+tr:not(:first-child) {
+    border-top: 1px solid black;
+}
+
+th {
+    border-bottom: 1px solid black;
+}

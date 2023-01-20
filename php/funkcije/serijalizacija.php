@@ -9,7 +9,7 @@ include_once 'dohvatanjeBaza.php';
 include_once 'dohvatanjeSer.php';
 
 function serVestIzBaze($red) {
-    $vest = new Vest($red['ID'], $red['NASLOV'], $red['SLIKA'], $red['DATUM_VREME_UNOSA']);
+    $vest = new Vest($red['ID'], $red['NASLOV'], $red['SLIKA'], $red['LINK'], $red['DATUM_VREME_UNOSA']);
 
     return $vest;
 }
@@ -22,6 +22,16 @@ function serViseVestiIzBaze($rezUpita) {
     }
 
     return $vesti;
+}
+
+function serViseIgaraIzBaze($rezUpita) {
+    $igre = array();
+
+    while ($red = $rezUpita->fetch_assoc()) {
+        array_push($igre, serIgruIzBaze($red));
+    }
+
+    return $igre;
 }
 
 function serIgruIzBaze($red) {

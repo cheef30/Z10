@@ -1,7 +1,19 @@
 <?php
-include dirname(__DIR__) . '/klase/baza/baza.php';
+include_once dirname(__DIR__) . '/klase/baza/baza.php';
 
-function dohvatiVesti($str = 1, $velStr = 10) {
+function dohvatiSveVesti() {
+    try {
+        $baza = new Baza();
+        $rez = $baza->selectAll('select * from VEST');
+
+        return $rez;
+    }
+    catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
+function dohvatiVesti($str, $velStr) {
     try {
         $baza = new Baza();
 
@@ -22,9 +34,9 @@ function dohvatiVesti($str = 1, $velStr = 10) {
 function dohvatiTakmicenja() {
     try {
         $baza = new Baza();
-        $red = $baza->selectAll("select t.*, i.NAZIV as NAZIV_IGRE from TAKMICENJE t join IGRA i on t.ID_IGRE = i.ID");
+        $rez = $baza->selectAll("select t.*, i.NAZIV as NAZIV_IGRE from TAKMICENJE t join IGRA i on t.ID_IGRE = i.ID");
 
-        return $red;
+        return $rez;
     }
     catch (Exception $e) {
         return $e->getMessage();
@@ -37,6 +49,18 @@ function dohvatiTakmicenjePoNazivu($naziv) {
         $red = $baza->selectOne("select * from TAKMICENJE where NAZIV = '$naziv'");
 
         return $red;
+    }
+    catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
+function dohvatiIgre() {
+    try {
+        $baza = new Baza();
+        $rez = $baza->selectAll("select * from IGRA");
+
+        return $rez;
     }
     catch (Exception $e) {
         return $e->getMessage();
