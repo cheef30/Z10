@@ -1,7 +1,6 @@
 welcome:
 
 sponzori(Samo je ostalo logo pomodora)
-slike za z10 teams - dobra rezolucija
 da se sredi da moze da se klikne na ono za mailove
 
 creators:
@@ -9,8 +8,8 @@ creators:
 slika umesto "Our team"
 
 stranica za svaki tim posebno:(csgo, lol, valorant, tft):
-da se uradi redovi i kolone umesto sekcija
-upcoming and past results
+    da se uradi redovi i kolone umesto sekcija
+    upcoming and past results
 
 stranica za sponzore:
 ostalo samo da se ubaci logo pomodora
