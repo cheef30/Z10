@@ -48,10 +48,10 @@ body{
 
 .mainNews .latest .matches{
     position: relative;
-    width: 70%;
+    width: 80%;
     height: 70%;
     top: 15%;
-    left: 15%;
+    left: 3%;
     color: black;
     font-weight: bold;
 
@@ -68,14 +68,26 @@ body{
     background-color: transparent;
     color: white;
     border: none;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid #e21d2d;
     cursor: pointer;
     font-size: 15px;
     text-transform: uppercase;
 }
 #upcomingBtn{
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #e21d2d;
+    transition: 0.3s ease-in-out;
 }
+#pasResBtn{
+    border-bottom: 1px solid #e21d2d;
+    transition: 0.3s ease-in-out;
+}
+#upcomingBtn:hover, #pasResBtn:hover{
+    color: #e21d2d;
+}
+#upcomingBtn:focus, #pasResBtn:focus{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.116) 60%, rgba(247, 0, 0, 0.281));
+}
+
 
 .mainNews .matches .upcoming{
     background-color: #101010;
@@ -90,33 +102,38 @@ body{
 .mainNews .matches .upcoming .matchInfo{
     position: relative;
     width: 100%;
-    height: 25%;
+    height: 35%;
     display: flex;
-    border: 1px solid white;
-    border-bottom: none;
 }
 .mainNews .matches .upcoming .slicice_dugme{
     position: relative;
     display: flex;
     width: 100%;
     height: 25%;
-    border: 1px solid white;
-    border-top: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
 }
 .mainNews .matches .upcoming .slicice_dugme .slicice{
     position: relative;
-    width: 75%;
+    width: 100%;
     height: 100%;
     display: flex;
-    left: 20%;
     align-items: center;
     top: -20px;
     color: white;
 }
 .mainNews .matches .upcoming .slicice_dugme .slicice img{
-    width: 50px;
-    height: 50px;
+    height: 130%;
+    margin-left: 6%;
+    margin-right: 6%;
+    filter: blur(8px);
+    transition: .3s ease-in-out;
+    margin-bottom: 20px;
 }
+.mainNews .matches .upcoming .slicice_dugme .slicice img:hover{
+    filter: none;
+}
+
 .mainNews .matches .upcoming .slicice_dugme .dugme{
     width: 35%;
     height: 100%;
@@ -124,14 +141,114 @@ body{
 .mainNews .matches .upcoming .matchInfo .left{
     position: relative;
     width: 70%;
+    text-align: center;
+    margin-top: 3%;
 }
 .mainNews .matches .upcoming .matchInfo .right{
     position: relative;
     width: 30%;
     color: white;
+    text-align: center;
+    margin-top: 3%;
 }
 
-
+#v{
+    font-size: 54px;
+    margin-top: -25px;
+    font-style: italic;
+}
+#s{
+    font-size: 54px;
+    margin-top: 25px;
+    font-style: italic;
+}
+.matchInfo .mini-title
+{
+    font-size: 16px;
+    font-weight: 900;
+    color: #e21d2d;
+}
+.matchInfo .not-bold
+{
+    font-weight: 300;
+}
+.dugme div {
+    margin-right: 10%;
+  }
+  .dugme div a {
+    width: 100%;
+    max-width: 240px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: #ff4655;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    margin: 10px 0;
+  }
+  
+  .dugme div a p {
+    margin: 0;
+    height: 54px;
+    line-height: 54px;
+    box-sizing: border-box;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    font-style: italic;
+    position: relative;
+    overflow: hidden;
+  }
+  .dugme div a p span.base {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: 1px solid #e21d2d;
+  }
+  
+  .dugme div a p span.bg {
+    left: -5%;
+    position: absolute;
+    background: #e21d2d;
+    width: 0;
+    height: 100%;
+    z-index: 3;
+    transition: 0.3s ease-out all;
+    transform: skewX(-10deg);
+  }
+  .dugme div a p span.text {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .dugme div a p span.text:after {
+    content: "";
+    width: 6px;
+    height: 4px;
+    right: 0;
+    bottom: 0;
+    background: #0f1923;
+    position: absolute;
+    transition: 0.3s ease-out all;
+    z-index: 5;
+  }
+  .dugme div a:hover {
+    color: #ece8e1;
+  }
+  .dugme div a:hover span.bg {
+    width: 110%;
+  }
+  .dugme div a:hover span.text:after {
+    background: #ece8e1;
+  }
 
 .mainNews .matches .pastRes{
     background-color: #101010;
@@ -140,12 +257,13 @@ body{
     height: 70%;
     top: 10%;
     left: 2.5%;
+    display: none;
 }
 
 .mainNews .matches .pastRes .matchInfo{
     position: relative;
     width: 100%;
-    height: 25%;
+    height: 35%;
     display: flex;
 }
 .mainNews .matches .pastRes .slicice_dugme{
@@ -153,16 +271,30 @@ body{
     display: flex;
     width: 100%;
     height: 25%;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
 }
 .mainNews .matches .pastRes .slicice_dugme .slicice{
-    width: 75%;
+    position: relative;
+    width: 100%;
     height: 100%;
     display: flex;
+    align-items: center;
+    top: -20px;
+    color: white;
 }
 .mainNews .matches .pastRes .slicice_dugme .slicice img{
-    width: 60px;
-    height: 60px;
+    height: 130%;
+    margin-left: 6%;
+    margin-right: 6%;
+    filter: blur(8px);
+    transition: .3s ease-in-out;
+    margin-bottom: 20px;
 }
+.mainNews .matches .pastRes .slicice_dugme .slicice img:hover{
+    filter: none;
+}
+
 .mainNews .matches .pastRes .slicice_dugme .dugme{
     width: 35%;
     height: 100%;
@@ -170,21 +302,21 @@ body{
 .mainNews .matches .pastRes .matchInfo .left{
     position: relative;
     width: 70%;
+    text-align: center;
+    margin-top: 3%;
 }
 .mainNews .matches .pastRes .matchInfo .right{
     position: relative;
     width: 30%;
     color: white;
+    text-align: center;
+    margin-top: 3%;
 }
-
-
-
 
 
 .pastRes{
     display: none;
 }
-
 
 .videos{
     background-color: blue;
@@ -246,6 +378,7 @@ body{
     position: relative;
     top: 100px;
 }
+
 
 footer{
     position: relative;
