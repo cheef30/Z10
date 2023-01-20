@@ -20,6 +20,9 @@ header{
 background: #cf0637;
 transition: 0.5s;
 }
+.sticky a.active,nav ul li a:hover{
+    background-color: #b80532;
+}
 
 nav{
     background:transparent;
@@ -55,7 +58,6 @@ nav ul li a{
 }
 
  a.active,nav ul li a:hover{
-    background:#9e042b;
     transition: .5s;
 }
 

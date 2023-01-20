@@ -7,6 +7,7 @@
     text-align: center;
     padding: 150px 40px;
     color: #d41f2e ;
+    z-index: 9999;
 }
 .newsletter p{
   max-width: 600px;

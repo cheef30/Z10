@@ -1,21 +1,18 @@
 welcome:
 
-sponzori
-3 slike za shop
+sponzori(Samo je ostalo logo pomodora)
 slike za z10 teams - dobra rezolucija
+da se sredi da moze da se klikne na ono za mailove
 
 creators:
 
 slika umesto "Our team"
 
-stranica za svaki tim posebno:( valorant, tft):
-
-slika koja ce biti pre rostera
-slike svih igraca + stuff team-a 
+stranica za svaki tim posebno:(csgo, lol, valorant, tft):
+da se uradi redovi i kolone umesto sekcija
 upcoming and past results
 
 stranica za sponzore:
-
 ostalo samo da se ubaci logo pomodora
 
 about: 
@@ -25,5 +22,4 @@ news stranica:
 
 Poslednja vest ce biti malo veca i gore na pocetku stranice a pored toga ce biti past/upcoming results a ispod toga ce biti vesti tj paginacija da se pokaze 10 poslednjih vesti :D
 ispod toga ono za newsletter footer i tjt
-
-
+UPDATE: poslednja vest je uradjena, pastRes i upcoming je donekle gotovo samo da se stilizuje i ostala je paginacija i grid da se uradi 
