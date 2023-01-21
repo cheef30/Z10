@@ -22,3 +22,5 @@ news stranica:
 Poslednja vest ce biti malo veca i gore na pocetku stranice a pored toga ce biti past/upcoming results a ispod toga ce biti vesti tj paginacija da se pokaze 10 poslednjih vesti :D
 ispod toga ono za newsletter footer i tjt
 UPDATE: poslednja vest je uradjena, pastRes i upcoming je donekle gotovo samo da se stilizuje i ostala je paginacija i grid da se uradi 
+
+navbar: da se lepo srede linkovi i padajuci meni posle toga(kod teams stranice i kod about stranice)
