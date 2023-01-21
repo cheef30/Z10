@@ -1,26 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  height: 100vh;
-  display: flex;
-  margin: 0;
-  background: linear-gradient(135deg, #295fd5, #9d8ce0);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.vesti{
+  width: 100%;
+  height: 70vh;
   align-items: center;
-  justify-content: center;
-  user-select: none;
+  position: relative;
 }
 
-.group {
+.wrapper {
+  width: 80%;
+  height: 80%;
+  top: 5%;
+  left: 10%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 250px;
+  
+}
+.wrapper .kartica{
+  position: relative;
+  background-color: aqua;
+  border: 1px solid black;
+  margin: 10px;
+}
+.wrapper .kartica .slika{
+  position: relative;
+  width: 100%;
+  height: 80%;
+  background-color: green;
+}
+.wrapper .kartica .slika img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.wrapper .kartica .naslov{
+  position: relative;
+  width: 100%;
+  height: 20%;
+  background-color: brown;
+  top: -9.5%;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.item {
-  width: 15vw;
-  height: 75vh;
-  background-position: center;
-  background-size: 75vh;
-  margin: 1vw;
-  border-radius: 3vw;
-  display: inline-block;
-  cursor: pointer;
 }

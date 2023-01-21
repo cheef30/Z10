@@ -318,44 +318,70 @@ body{
     display: none;
 }
 
-.videos{
-    background-color: blue;
-    position: relative;
-    width: 80%;
-    height: 100vh;
-    top: 100px;
-    left: 10%;
-}
-
-.videos .card-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+.vesti{
+    top: 300px;
     width: 100%;
-    height: 90%;
+    height: 70vh;
+    align-items: center;
+    position: relative;
+  }
+  .vesti h1{
+    color: white;
+    position: relative;
+    width: max-content;
+    left: 40%;
+    font-size: 50px;
+    font-weight: bold;
   }
   
- .videos .card-grid .card {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
+  .wrapper {
+    width: 80%;
+    height: 80%;
+    top: 5%;
+    left: 10%;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    
   }
-  .videos .card-grid .card .image{
+  .wrapper .kartica{
+    position: relative;
+    margin: 10px;
+    background-color: black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: .3s all ease;
+  }
+  .wrapper .kartica:hover{
+    border: 1px solid red;
+  }
+  .wrapper .kartica .slika{
+    position: relative;
     width: 100%;
-    height: 70%;
-    background-color: #101010;
+    height: 80%;
   }
-  .videos .card-grid .card .image img{
+  .wrapper .kartica .slika img{
+    width: 100%;
     height: 100%;
-    width: 100%;
-    object-fit: contain;
+    position: relative;
+    border-radius: 30px;
   }
-
-  .videos .card-grid .card .naslov{
-    background-color: green;
+  .wrapper .kartica .naslov{
+    position: relative;
     width: 100%;
-    height: 30%;
+    height: 20%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .wrapper .kartica .naslov h4{
+    position: relative;
+    top: 25%;
   }
   
   @media (max-width: 768px) {
@@ -376,11 +402,11 @@ body{
 
 .newsletter{
     position: relative;
-    top: 100px;
+    top: 500px;
 }
 
 
 footer{
     position: relative;
-    top: 100px;
+    top: 500px;
 }
