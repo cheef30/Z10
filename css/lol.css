@@ -2,10 +2,13 @@ body{
     background-color: #101010;
 }
 .teamSection{
-    height: 100vh;
-    position: relative;
-    text-align: center;
+  width: 100%;
+  height: 200vh;
+  align-items: center;
+  position: relative;
 }
+
+
 .teamSection h1{
     font-weight: bold;
     font-size: 50px;
@@ -13,33 +16,40 @@ body{
     align-items: center;
     top: 50px;
     color: #fff;
+    left: 30%;
+    width: max-content;
 }
 .teamSection h1 span{
     color: #d41f2e ;
 }
-.teamSection .roster{
-    width: 100%;
-    height: 90%;
-    position: relative;
-    justify-content: center;
-    top: 5%;
-    display: flex;
+
+.roster {
+  width: 80%;
+  height: 80%;
+  top: 5%;
+  left: 10%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 700px;
+  
 }
 .teamSection .roster .igrac{
-    position: relative;
-    width: 350px;
-    height: 70%;
-    top: 15%;
-    margin-left: 50px;
-    opacity: 1;
-    transform: skew(-5deg);
-    text-align: center;
+  position: relative;
+  width: 350px;
+  height: 600px;
+  top: 15%;
+  margin-left: 50px;
+  opacity: 1;
+  transform: skew(-5deg);
+  text-align: center;
 }
+
 .roster div{
-    visibility: hidden;
-    opacity: 0;
-    transition: all ease 0.3s;
-  }
+  transition: all ease 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
 
 .teamSection .roster .igrac .slika{
     visibility: visible;
