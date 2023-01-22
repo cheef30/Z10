@@ -5,6 +5,7 @@ include dirname(__DIR__) . '/klase/modeli/takmicenje.php';
 include dirname(__DIR__) . '/klase/modeli/mec.php';
 include dirname(__DIR__) . '/klase/modeli/tim.php';
 include dirname(__DIR__) . '/klase/modeli/timRezultat.php';
+include_once dirname(__DIR__) . '/klase/modeli/mecTakmicenjeIgra.php';
 include_once 'dohvatanjeBaza.php';
 include_once 'dohvatanjeSer.php';
 
@@ -60,6 +61,22 @@ function serMeceveIzBaze($rezUpita) {
     }
 
     return $mecevi;
+}
+
+function serMeceveTakmicenjeIgraIzBaze($rezUpita) {
+    $meceviTakmicenjeIgra = array();
+
+    while ($red = $rezUpita->fetch_assoc()) {
+        array_push($meceviTakmicenjeIgra, serMecTakmicenjeIgraIzBaze($red));
+    }
+
+    return $meceviTakmicenjeIgra;
+}
+
+function serMecTakmicenjeIgraIzBaze($red) {
+    $mecTakmicenjeIgra = new MecTakmicenjeIgra(serMecIzBaze($red), $red['NAZIV_TAKMICENJA'], $red['NAZIV_IGRE']);
+
+    return $mecTakmicenjeIgra;
 }
 
 function serTimRezultatIzBaze($red) {

@@ -24,6 +24,29 @@ if (!isset($result[$err]))
             }
             $result[$res] = dohvatiTakmicenjePoNazivuSer($naziv);
             break;
+        case 'mecevi':
+            $str = $_GET['str'];
+            $velStr = $_GET['velStr'];
+            $sortPo = $_GET['sortPo'];
+            $tipMeca = $_GET['tipMeca'];
+
+            $greska = '';
+            if (!isset($str))
+            {
+                $greska = 'Niste prosledili stranicu!';
+            }
+            else if (!isset($velStr)) {
+                $greska = 'Niste prosledili veličinu stranice!';
+            }
+
+            if (!empty($greska)) {
+                $result[$err] = $greska;
+                break;
+            }
+
+            $result[$res] = dohvatiMeceveSer($str, $velStr, $sortPo, $tipMeca);
+            
+            break;
         default:
             $obj = $_GET[$obj];
             $result[$err] = "Objekat $obj ne postoji!";
