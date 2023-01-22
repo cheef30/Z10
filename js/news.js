@@ -64,6 +64,19 @@ function matchInfoHTML(el) {
     }));
     let vreme = el.mec.vreme
 
+    let rezDeo = '<span id="v">V</span><span id="s">S</span>'
+    if (el.mec.timoviRezultati.length = 1)
+        el.mec.timoviRezultati.push(el.mec.timoviRezultati[0])
+    
+    if (el.mec.timoviRezultati[0].rezultat != null && el.mec.timoviRezultati[1].rezultat != null)
+    {
+        if (el.mec.timoviRezultati[0].tim.id == el.mec.timoviRezultati[1].tim.id) {
+            rezDeo = `<span id="v">${generisiRedniBroj(el.mec.timoviRezultati[0].rezultat)}</span>`
+        }
+        else
+            rezDeo = `<span id="v">${el.mec.timoviRezultati[0].rezultat}:${el.mec.timoviRezultati[1].rezultat}</span>`
+    }
+
     return `
     <div class="matchInfo">
         <div class="left">
@@ -76,8 +89,7 @@ function matchInfoHTML(el) {
     <div class="slicice_dugme">
         <div class="slicice">
             <img class="up" src="../images/logos/${el.mec.timoviRezultati[0].tim.logo}" alt="">
-            <span id="v">V</span>
-            <span id="s">S</span>
+            ${rezDeo}
             <img class="down" src="../images/logos/${el.mec.timoviRezultati[1].tim.logo}" alt="">
         </div>
         <div class="dugme">
@@ -94,4 +106,19 @@ function matchInfoHTML(el) {
     </div>
     <br>
 `;
+}
+
+function generisiRedniBroj(br) {
+    let vrednost = br.toString()
+
+    if (br == 1)
+        vrednost += 'st'
+    else if (br == 2)
+        vrednost += 'nd'
+    else if (br == 3)
+        vrednost += 'rd'
+    else
+        vrednost += 'th'
+
+    return vrednost
 }
