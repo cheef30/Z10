@@ -10,6 +10,10 @@ function dohvatiMeceveZaTakmicenjeSer($idTakmicenja) {
     return serMeceveIzBaze(dohvatiMeceveZaTakmicenje($idTakmicenja));
 }
 
+function dohvatiMeceveSer($str, $velStr, $sortPo, $tipMeca) {
+    return serMeceveTakmicenjeIgraIzBaze(dohvatiMeceveSve($str, $velStr, $sortPo, $tipMeca));
+}
+
 function dohvatiTimoveRezultateZaMecSer($idMeca) {
     return serViseTimovaRezultataIzBaze(dohvatiTimoveRezultateZaMec($idMeca));
 }

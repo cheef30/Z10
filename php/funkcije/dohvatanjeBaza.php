@@ -1,6 +1,11 @@
 <?php
 include_once dirname(__DIR__) . '/klase/baza/baza.php';
 
+enum TipMeca: int {
+    case BUDUCI = 1;
+    case PROSLI = 2;
+}
+
 function dohvatiSveVesti() {
     try {
         $baza = new Baza();
@@ -82,7 +87,41 @@ function dohvatiIgru($idIgre) {
 function dohvatiMeceveZaTakmicenje($idTakmicenja) {
     try {
         $baza = new Baza();
-        $rez = $baza->selectAll("select * from MEC where ID_TAKMICENJA = $idTakmicenja");
+        $rez = $baza->selectAll("select * from MEC where ID_TAKMICENJA = $idTakmicenja ORDER BY DATUM, VREME");
+
+        return $rez;
+    }
+    catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
+function dohvatiMeceveSve($str, $velStr, $sortPo, $tipMeca) {
+    try {
+        $baza = new Baza();
+
+        $ukupno = $baza->selectOne('select count(*) as ukupno from MEC')['ukupno'];
+        if ($str > $maxStr = round($ukupno / $velStr, 0, PHP_ROUND_HALF_UP))
+            $str = $maxStr;
+
+        $offset = $velStr * ($str - 1);
+        
+        $upit = "select m.*, t.NAZIV AS NAZIV_TAKMICENJA, i.naziv as NAZIV_IGRE
+                from mec m
+                    join takmicenje t on t.id = m.ID_TAKMICENJA
+                    join igra i on i.id = t.id_igre\n";
+
+        if ($tipMeca == 1)
+            $upit .= "where cast(concat(datum, ' ', vreme) as datetime) > current_timestamp() or (select count(*) from tim_mec where ID_MECA = m.ID and REZULTAT is null) > 0\n";
+        else if ($tipMeca == 2)
+            $upit .= "where cast(concat(datum, ' ', vreme) as datetime) < current_timestamp()\n";
+
+        if (!empty($sortPo)) {
+            $upit .= "order by $sortPo\n";
+        }
+        
+        $upit .= "limit $offset, $velStr";
+        $rez = $baza->selectAll($upit);
 
         return $rez;
     }
