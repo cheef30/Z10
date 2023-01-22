@@ -23,7 +23,7 @@ function dohvatiVesti($str, $velStr) {
         $baza = new Baza();
 
         $ukupno = $baza->selectOne('select count(*) as ukupno from VEST')['ukupno'];
-        if ($str > $maxStr = round($ukupno / $velStr, 0, PHP_ROUND_HALF_UP))
+        if ($str > $maxStr = ceil($ukupno / $velStr))
             $str = $maxStr;
 
         $offset = $velStr * ($str - 1);

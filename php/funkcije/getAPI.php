@@ -12,7 +12,7 @@ if( !isset($_GET[$obj]))
 if (!isset($result[$err]))
     switch ($_GET[$obj]) {
         case 'vesti':
-            $result[$res] = dohvatiVestiSer($_GET['page'], $_GET['page-size']);
+            $result[$res] = dohvatiVestiSer($_GET['str'], $_GET['velStr']);
             break;
         case 'takmicenje':
             $naziv = $_GET['naziv'];

@@ -124,3 +124,29 @@ function generisiRedniBroj(br) {
 
     return vrednost
 }
+
+function popuniVesti() {
+    let parametri = {
+        objekat: 'vesti',
+        str: 1,
+        velStr: 12
+    }
+    get(parametri).then((data) => {
+        let wrapper = document.getElementsByClassName('wrapper')[0]
+        console.log(data)
+        wrapper.innerHTML = ''
+
+        data.res.forEach(el => {
+            wrapper.innerHTML += `
+            <div class="kartica">
+                <div class="slika">
+                    <a target="_blank" href="${el.link}"><img src="../images/vesti/${el.slika}" alt=""></a>
+                </div>
+                <div class="naslov">
+                <h4>${el.naslov}</h4>
+                </div>
+            </div>
+            `
+        });
+    })
+}

@@ -1,5 +1,5 @@
 <?php
-define('SLIKE_FOLDER', dirname(__DIR__) . '/../images/');
+define('SLIKE_FOLDER', dirname(__DIR__) . '/../images/vesti/');
 
 function navbar() {
     echo '<nav>
