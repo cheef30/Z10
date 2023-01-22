@@ -47,7 +47,7 @@ function getToken(){
 }
 
   function strimhtml(slikaP, imestrimera, brojgledalaca){
-  return `<a href="https://www.twitch.tv/${imestrimera}"><div class='streams'> <table>
+  return `<a href="https://www.twitch.tv/${imestrimera}" target="_blank"><div class='streams'> <table>
   <tr>
   <td class="levo"><img src='${slikaP}'></td>
   <td class="desno" colspan='2'>
