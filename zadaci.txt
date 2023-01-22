@@ -8,7 +8,6 @@ creators:
 slika umesto "Our team"
 
 stranica za svaki tim posebno:(csgo, lol, valorant, tft):
-    da se uradi redovi i kolone umesto sekcija
     upcoming and past results
 
 stranica za sponzore:

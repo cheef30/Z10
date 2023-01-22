@@ -2,6 +2,60 @@
 body{
   background-color: #101010;
 }
+
+
+.dzigubigule{
+  position: absolute;
+  left: 40%;
+  margin-top: 35px;
+  height: max-content;
+  z-index: 999999;
+  transition: all linear 1s;
+}
+.streams{
+  transition: all 0.5s linear;
+  position: absolute;
+  height: 70px;
+  width: 270px;
+  background-color: rgb(29, 29, 29);
+  margin-top: 10px;
+  border-radius: 10px;
+  
+}
+.dzigubigule a{
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.dzigubigule:hover .streams{
+  position: relative;
+  transition: all 0.5s linear;
+  
+}
+table img{
+  border-radius: 50%;
+  position: relative;
+  top: 7px;
+  width: 50px;
+  height: 50px;
+}
+table .gore{
+  position: relative;
+  color: white;
+  justify-content: center;
+}
+table .dole{
+  display: flex;
+  justify-content: baseline;
+  position: relative;
+  width: 200px;
+  top: 10px;
+  color: white;
+  float: left;
+}
+table .dole p {
+  color: red;
+}
 .section {
     position: relative;
     width: 100%;
