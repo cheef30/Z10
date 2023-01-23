@@ -125,7 +125,6 @@ table .dole p {
 
   .sponsors{
     width: 100%;
-    height: 70vh;
     align-items: center;
     padding: 50px 0px 50px 0px;
 }
@@ -189,7 +188,6 @@ table .dole p {
 
   .teams{
     width: 100%;
-    height: 70vh;
     background-color: #101010;
     color: white;
 }
@@ -199,21 +197,25 @@ table .dole p {
     top: 50px;
     width: max-content;
     left: 200px;
+    color: white;
+    z-index: 1;
+    margin-bottom: 4%;
+    left: 11%;
+    font-size: 50px;
 }
 
 .teams .team{
     position: relative;
     background-color: #101010;
-    width: 80%;
-    height: 75%;
     top: 15%;
-    left: 10%;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
 }
 .teams .team .team-card{
-    background-color: blue;
     width: 18%;
     margin: 2% 2% 2% 0;
+    border: 1px solid red;
     transition: all .3s ease;
 }
 .teams .team .team-card:hover{
@@ -243,7 +245,6 @@ table .dole p {
 }
 .shop{
   width: 100%;
-  height: 80vh;
   color: white;
   z-index: -9999;
 }
@@ -251,9 +252,10 @@ table .dole p {
 .shop .left{
   position: relative;
   width: 30%;
-  left: 300px;
+  left: 50px !important;
   top: 25%;
   font-weight: bold;
+  z-index: 1000;
 }
 .shop .left h4{
   font-size: 30px;
@@ -275,7 +277,7 @@ table .dole p {
 .shop .right{
   position: relative;
   width: 70%;
-  left: 30%;
+  left: 15%;
   top: -100px;
 }
 
@@ -386,5 +388,33 @@ table .dole p {
   } to{
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .shop .right{
+    left:30%;
+  }
+  .shop .left{
+    position: relative;
+    width: 30%;
+    left: 300px !important;
+    top: 25%;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 950px) {
+
+	.gap{clear:both;display:block;}
+  .teams .team{
+    flex-flow: wrap;
+  }
+  .teams .team .team-card{
+    width: 30%;
+  }
+
+}
+@media only screen and (max-width: 650px){
+  .teams h1{
+    margin-bottom: 6%;
   }
 }
