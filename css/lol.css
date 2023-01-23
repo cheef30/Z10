@@ -22,3 +22,15 @@ body{
     background-image: url(../images/csgo_silhouette.png);
 }
 
+.mecevi{
+    position: relative;
+    top: 200px;
+}
+.newsletter{
+    position: relative;
+    top: 200px;
+}
+footer{
+    position: relative;
+    top: 200px;
+}
