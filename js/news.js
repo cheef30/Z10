@@ -37,7 +37,6 @@ function popuniBuduceMeceve() {
 
         data.res.forEach(el => {
             console.log(el);
-            console.log(el.mec.timoviRezultati[0].tim.logo);
 
             buduciMeceviDiv.innerHTML += matchInfoHTML(el)
         });
@@ -65,8 +64,9 @@ function matchInfoHTML(el) {
     let vreme = el.mec.vreme
 
     let rezDeo = '<span id="v">V</span><span id="s">S</span>'
-    if (el.mec.timoviRezultati.length = 1)
+    if (el.mec.timoviRezultati.length == 1){
         el.mec.timoviRezultati.push(el.mec.timoviRezultati[0])
+    }
     
     if (el.mec.timoviRezultati[0].rezultat != null && el.mec.timoviRezultati[1].rezultat != null)
     {
@@ -74,7 +74,9 @@ function matchInfoHTML(el) {
             rezDeo = `<span id="v">${generisiRedniBroj(el.mec.timoviRezultati[0].rezultat)}</span>`
         }
         else
+        {
             rezDeo = `<span id="v">${el.mec.timoviRezultati[0].rezultat}:${el.mec.timoviRezultati[1].rezultat}</span>`
+        }
     }
 
     return `
@@ -121,4 +123,30 @@ function generisiRedniBroj(br) {
         vrednost += 'th'
 
     return vrednost
+}
+
+function popuniVesti() {
+    let parametri = {
+        objekat: 'vesti',
+        str: 1,
+        velStr: 12
+    }
+    get(parametri).then((data) => {
+        let wrapper = document.getElementsByClassName('wrapper')[0]
+        console.log(data)
+        wrapper.innerHTML = ''
+
+        data.res.forEach(el => {
+            wrapper.innerHTML += `
+            <div class="kartica">
+                <div class="slika">
+                    <a target="_blank" href="${el.link}"><img src="../images/vesti/${el.slika}" alt=""></a>
+                </div>
+                <div class="naslov">
+                <h4>${el.naslov}</h4>
+                </div>
+            </div>
+            `
+        });
+    })
 }
