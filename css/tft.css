@@ -1,0 +1,21 @@
+body{
+    background-color: #101010;
+}
+.dva{
+    background-image: url(../images/WhatsApp\ Image\ 2023-01-23\ at\ 16.16.11.jpeg);
+}
+.jedan{
+    background-image: url(../images/WhatsApp\ Image\ 2023-01-23\ at\ 16.16.11\ \(1\).jpeg);
+}
+.mecevi{
+    position: relative;
+    top: 200px;
+}
+.newsletter{
+    position: relative;
+    top: 200px;
+}
+footer{
+    position: relative;
+    top: 200px;
+}
