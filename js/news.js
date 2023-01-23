@@ -1,3 +1,5 @@
+const velStranice = 12
+
 function upcoming(){
     var upcomingMatches = document.getElementById("upcoming")
     var pastResMatches = document.getElementById("pastRes")
@@ -22,7 +24,12 @@ function pastRes(){
     pasResBtn.style.borderBottom = '3px solid red'
 }
 
-function popuniBuduceMeceve() {
+function popuniDivove() {
+    popuniMeceve()
+    popuniVesti(1, velStranice)
+}
+
+function popuniMeceve() {
     let parametri = {
         objekat: 'mecevi',
         str: 1,
@@ -36,8 +43,6 @@ function popuniBuduceMeceve() {
         buduciMeceviDiv.innerHTML = '';
 
         data.res.forEach(el => {
-            console.log(el);
-
             buduciMeceviDiv.innerHTML += matchInfoHTML(el)
         });
     })
@@ -67,10 +72,15 @@ function matchInfoHTML(el) {
     if (el.mec.timoviRezultati.length == 1){
         el.mec.timoviRezultati.push(el.mec.timoviRezultati[0])
     }
+
+    let istiTim = el.mec.timoviRezultati[0].tim.id == el.mec.timoviRezultati[1].tim.id
+
+    if (istiTim)
+        rezDeo = '<span id="v">TBD</span>'
     
     if (el.mec.timoviRezultati[0].rezultat != null && el.mec.timoviRezultati[1].rezultat != null)
     {
-        if (el.mec.timoviRezultati[0].tim.id == el.mec.timoviRezultati[1].tim.id) {
+        if (istiTim) {
             rezDeo = `<span id="v">${generisiRedniBroj(el.mec.timoviRezultati[0].rezultat)}</span>`
         }
         else
@@ -125,28 +135,61 @@ function generisiRedniBroj(br) {
     return vrednost
 }
 
-function popuniVesti() {
+function popuniVesti(stranica, velicinaStranice, postaviNajnoviji = true) {
+    let brStrEl = document.getElementById('brStr')
+
     let parametri = {
         objekat: 'vesti',
-        str: 1,
-        velStr: 12
+        str: stranica,
+        velStr: velicinaStranice
     }
     get(parametri).then((data) => {
+        if (data.res.length == 0)
+            return
+        
         let wrapper = document.getElementsByClassName('wrapper')[0]
-        console.log(data)
         wrapper.innerHTML = ''
+        
+        if (postaviNajnoviji)
+        {
+            let newest = document.getElementsByClassName('lastNew')[0]
+            newest.innerHTML = `
+            <div class="image">
+                <img src="../images/vesti/${data.res[0].putanjaSlike}" alt="">
+                <h1>${kraciNaslov(data.res[0].naslov, 66)}</h1>
+            </div>
+            `
+        }
 
         data.res.forEach(el => {
             wrapper.innerHTML += `
             <div class="kartica">
                 <div class="slika">
-                    <a target="_blank" href="${el.link}"><img src="../images/vesti/${el.slika}" alt=""></a>
+                    <a target="_blank" href="${el.link}"><img src="../images/vesti/${el.putanjaSlike}" alt=""></a>
                 </div>
                 <div class="naslov">
-                <h4>${el.naslov}</h4>
+                <h4>${kraciNaslov(el.naslov, 56)}</h4>
                 </div>
             </div>
             `
         });
+
+        brStrEl.innerHTML = stranica
     })
+}
+
+function kraciNaslov(naslov, maksDuzina) {
+    if (naslov.length > maksDuzina)
+        return naslov.substring(0, maksDuzina) + '...'
+
+    return naslov
+}
+
+function stranica(pomeraj) {
+    let trenutnaStranica = parseInt(document.getElementById('brStr').innerHTML)
+    let str = trenutnaStranica + pomeraj
+    if (str < 1)
+        return
+
+    popuniVesti(str, velStranice, false)
 }

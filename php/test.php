@@ -1,5 +1,5 @@
 <?php
-include_once dirname(__DIR__) . '/php/funkcije/dohvatanjeBaza.php';
+include_once dirname(__DIR__) . '/php/funkcije/ubacivanje.php';
 
-echo dohvatiVesti(1, 12)
+echo dodajVest("McDonald's in Korea | Z10 Adventures - Vlog #1", '1', '')
 ?>

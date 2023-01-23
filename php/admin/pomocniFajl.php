@@ -1,6 +1,4 @@
 <?php
-define('SLIKE_FOLDER', dirname(__DIR__) . '/../images/vesti/');
-
 function navbar() {
     echo '<nav>
     <ul>
@@ -10,13 +8,14 @@ function navbar() {
         <li><a href="">Timovi</a></li>
         <li><a href="">Mečevi</a></li>
         <li><a href="vesti.php">Vesti</a></li>
+        <li><a href="mejlovi.php">Mejlovi</a></li>
         <li><a href="odjava.php">Odjava</a></li>
     </ul>
 </nav>';
 }
 
-function uploadSlike($fajl, &$imeSlike) {
-    $putanja = SLIKE_FOLDER . basename($fajl["name"]);
+function uploadSlike($fajl, $folder, &$imeSlike) {
+    $putanja = dirname(__DIR__) . "/../images/$folder/" . basename($fajl["name"]);
 
     if (getimagesize($fajl["tmp_name"]) === false)
         return 'Niste izabrali sliku! Morate izabrati sliku!';

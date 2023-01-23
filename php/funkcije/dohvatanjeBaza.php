@@ -22,9 +22,9 @@ function dohvatiVesti($str, $velStr) {
     try {
         $baza = new Baza();
 
-        $ukupno = $baza->selectOne('select count(*) as ukupno from VEST')['ukupno'];
+        /*$ukupno = $baza->selectOne('select count(*) as ukupno from VEST')['ukupno'];
         if ($str > $maxStr = ceil($ukupno / $velStr))
-            $str = $maxStr;
+            $str = $maxStr;*/
 
         $offset = $velStr * ($str - 1);
         $rez = $baza->selectAll("select * from VEST order by DATUM_VREME_UNOSA desc limit $offset, $velStr");

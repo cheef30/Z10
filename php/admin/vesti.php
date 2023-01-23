@@ -47,28 +47,24 @@ if (!isset($_SESSION['korIme'])) {
         <?php
             include_once dirname(__DIR__) . '/funkcije/dohvatanjeSer.php';
 
-            try {
-                $vesti = dohvatiSveVestiSer();
+            $vesti = dohvatiSveVestiSer();
 
-                foreach ($vesti as $vest) {
-                    $id = $vest->id;
-                    $naslov = $vest->naslov;
-                    $slika = $vest->putanjaSlike;
-                    $link = $vest->link;
-                    $datumVreme = $vest->datumVremeUnosa;
+            foreach ($vesti as $vest) {
+                $id = $vest->id;
+                $naslov = $vest->naslov;
+                $slika = $vest->putanjaSlike;
+                $link = $vest->link;
+                $datumVreme = $vest->datumVremeUnosa;
 
-                    echo "
-                        <tr>
-                            <td>$id</td>
-                            <td>$naslov</td>
-                            <td>$slika</td>
-                            <td>$link</td>
-                            <td>$datumVreme</td>
-                        </tr>
-                    ";
-                }
-            }
-            finally {
+                echo "
+                    <tr>
+                        <td>$id</td>
+                        <td>$naslov</td>
+                        <td>$slika</td>
+                        <td>$link</td>
+                        <td>$datumVreme</td>
+                    </tr>
+                ";
             }
         ?>
         </tbody>
@@ -95,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-    if ($err = uploadSlike($_FILES['slika'], $imeSlike) !== true) {
+    if ($err = uploadSlike($_FILES['slika'], 'vesti', $imeSlike) !== true) {
         header("Location: vesti.php?por=$err");
         exit();
     }
