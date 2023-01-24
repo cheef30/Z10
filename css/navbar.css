@@ -89,8 +89,17 @@ nav ul li a{
     text-decoration: none;
     display: block;
     text-align: left;
-    padding: 5px 5px !important;
     font-size: 16px;
+    width: 100%;
+    border: 1px solid black;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+  }
+  .dropdown-content a p{
+    position: relative;
+    top: -15px;
+    color: white;
   }
   
   .dropdown-content a:hover {
@@ -128,7 +137,7 @@ nav ul li a{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: blue;
+        background-color: #b80532;
         top: 80px;
         left: -100%;
         text-align: center;

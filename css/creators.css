@@ -138,11 +138,11 @@ body{
     opacity: 1;
 }
 .card5 {
-    background: url("../images/5.png") center center no-repeat;
+    background: url("../images/komedyja.png") center center no-repeat;
     background-size: 300px;
 }
 .card5:hover {
-    background: url("../images/5.png") left center no-repeat;
+    background: url("../images/komedyja.png") left center no-repeat;
     background-size: 500px;
 }
 .card5:hover h2 {
