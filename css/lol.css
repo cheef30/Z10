@@ -3,24 +3,42 @@ body{
 }
 
 .teamSection .roster .igrac .jedan{
-    background-image: url(../images/lol1.png);
+    background-image: url(../images/lol4.png);
 }
 
 .dva{
+    background-image: url(../images/lol5.png);
+}
+.tri{
+    background-image: url(../images/lol3.png);
+}
+.cetri{
+    background-image: url(../images/lol1.png);
+}
+.pet{
+    background-image: url(../images/lol2.png);
+}
+.sest{
+    background-image: url(../images/csgo_silhouette.png);
+}
+
+/*.dva{
     background-image: url(../images/lol2.png);
 }
 .tri{
     background-image: url(../images/lol3.png);
 }
 .cetri{
-    background-image: url(../images/lol4.png);
+    
 }
 .pet{
-    background-image: url(../images/lol5.png);
+    
 }
 .sest{
     background-image: url(../images/csgo_silhouette.png);
-}
+} */
+
+
 
 .mecevi{
     position: relative;
