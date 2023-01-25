@@ -112,7 +112,7 @@ function dohvatiMeceveSve($str, $velStr, $sortPo, $tipMeca, $idTakmicenja) {
                     join igra i on i.id = t.id_igre\n";
 
         if ($tipMeca == 1)
-            $upit .= "where cast(concat(datum, ' ', vreme) as datetime) > current_timestamp() or (select count(*) from tim_mec where ID_MECA = m.ID and REZULTAT is null) > 0\n";
+            $upit .= "where (cast(concat(datum, ' ', vreme) as datetime) > current_timestamp() or (select count(*) from tim_mec where ID_MECA = m.ID and REZULTAT is null) > 0)\n";
         else if ($tipMeca == 2)
             $upit .= "where cast(concat(datum, ' ', vreme) as datetime) < current_timestamp()\n";
 

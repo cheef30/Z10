@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/roster.css">
     <link rel="stylesheet" href="../css/mecevi.css">
 </head>
-<body>
+<body onload="popuniMeceve(3)">
     <header>
         <nav>
             <input type="checkbox" id="check">
@@ -289,7 +289,7 @@
             <div class="email-box">
                 <i class="fa-regular fa-envelope"></i>
                 <input class="tbox" type="email" placeholder="Enter your email">
-                <button class="btn" type="button" name="button">Subscribe</button>
+                <button class="btn" type="button" name="button" onclick="potpisiSe()">Subscribe</button>
             </div>
         </form>
     </div>
@@ -339,5 +339,6 @@
     </footer>
     <script src="../js/navbar.js"></script>
     <script src="../js/news.js"></script>
+    <script src="../js/phpInterface.js"></script>
 </body>
 </html>

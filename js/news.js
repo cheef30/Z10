@@ -25,11 +25,11 @@ function pastRes(){
 }
 
 function popuniDivove() {
-    popuniMeceve()
+    popuniMeceveSve()
     popuniVesti(1, velStranice)
 }
 
-function popuniMeceve() {
+function popuniMeceveSve() {
     let parametri = {
         objekat: 'mecevi',
         str: 1,
