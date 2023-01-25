@@ -96,7 +96,7 @@ function dohvatiMeceveZaTakmicenje($idTakmicenja) {
     }
 }
 
-function dohvatiMeceveSve($str, $velStr, $sortPo, $tipMeca) {
+function dohvatiMeceveSve($str, $velStr, $sortPo, $tipMeca, $idTakmicenja) {
     try {
         $baza = new Baza();
 
@@ -115,6 +115,14 @@ function dohvatiMeceveSve($str, $velStr, $sortPo, $tipMeca) {
             $upit .= "where cast(concat(datum, ' ', vreme) as datetime) > current_timestamp() or (select count(*) from tim_mec where ID_MECA = m.ID and REZULTAT is null) > 0\n";
         else if ($tipMeca == 2)
             $upit .= "where cast(concat(datum, ' ', vreme) as datetime) < current_timestamp()\n";
+
+        if (isset($idTakmicenja))
+        {
+            if ($tipMeca == 1 || $tipMeca == 2)
+                $upit .= "and m.ID_TAKMICENJA = $idTakmicenja\n";
+            else
+                $upit .= "where m.ID_TAKMICENJA = $idTakmicenja\n";
+        }
 
         if (!empty($sortPo)) {
             $upit .= "order by $sortPo\n";

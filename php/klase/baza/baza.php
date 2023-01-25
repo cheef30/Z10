@@ -16,8 +16,9 @@ class Baza {
     public function selectAll($upit) {
         $result = $this->conn->query($upit);
 
-        if ($result->num_rows == 0)
+        /*if ($result->num_rows == 0) {
             return false;
+        }*/
 
         if (!$result)
             Baza::ThrowQueryException($upit, $this->conn->error);
