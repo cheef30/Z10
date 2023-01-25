@@ -65,6 +65,7 @@ function popuniMeceve(idTakmicenja) {
         objekat: 'mecevi',
         str: 1,
         velStr: 5,
+        sortPo: "datum, vreme",
         tipMeca: 1,
         id_takmicenja: idTakmicenja
     }
@@ -72,13 +73,13 @@ function popuniMeceve(idTakmicenja) {
         let buduciMeceviDiv = document.getElementById('upcoming');
 
         buduciMeceviDiv.innerHTML = '';
-        console.log(data)
 
         data.res.forEach(el => {
             buduciMeceviDiv.innerHTML += matchInfoHTML(el)
         });
     })
 
+    parametri.sortPo = "datum desc, vreme desc"
     parametri.tipMeca = 2
     get(parametri).then((data) => {
         let prosliMeceviDiv = document.getElementById('pastRes')
