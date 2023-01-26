@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Zero Tenacity - Home</title>
+  <meta name="description" content="Zero Tenacity - Pridružite se najboljim timovima u LoL-u, Valorant-u, CS:GO-u i TFT-u. Profesionalni igrači i kreativni kontent kreatori - imaninna, sto1e, assaika, komedyja raqa, okami. Pratite nas i saznajte više o našim uspesima i događajima.">
+  <meta name="keywords" content="Zero Tenacity, eSport organizacija, LoL, Valorant, CS:GO, TFT, timovi, igrači, kontent kreatori, imaninna, sto1e, assaika, komedyja, raqa, okami, uspesi, događaji">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Zero Tenacity">
+  <meta property="og:description" content="Profesionalni igrači i kreativni kontent kreatori - imaninna, sto1e, assaika, komedyja i raqa, okami. Pridružite se Zero Tenacity i postanite dio najboljih timova u LoL-u, Valorant-u, CS:GO-u i TFT-u">
+  <meta property="og:url" content="http://www.zerotenacity.com/">
+  <meta property="og:image" content="http://www.zerotenacity.com/images/logo.jpg">
+  <meta name="description" content="Join the top teams in LoL, Valorant, CS:GO and TFT with Zero Tenacity. Professional players and creative content creators - imaninna, sto1e, assaika, komedyja, raqa and okami. Follow us and learn more about our achievements and events.">
+  <meta name="keywords" content="Zero Tenacity, eSport organization, LoL, Valorant, CS:GO, TFT, teams, players, content creators, imaninna, sto1e, assaika, komedyja, raqa, okami, achievements, events">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Zero Tenacity - The Best eSport Organization for LoL, Valorant, CS:GO and TFT">
+  <meta property="og:description" content="Join the top teams in LoL, Valorant, CS:GO and TFT with Zero Tenacity. Professional players and creative content creators - imaninna, sto1e, assaika, komedyja, raqa and okami.">
+  <meta property="og:url" content="http://www.zerotenacity.com/">
+  <meta property="og:image" content="http://www.zerotenacity.com/images/logo.jpg">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
-
-    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/welcome.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/welcome.css">
+
     <link rel="stylesheet" href="../css/newsletter.css">
 </head>
 <body>
@@ -38,7 +52,13 @@
                     </div>
                 </li>
                 <li><a href="../html/news.html">News</a></li>
-                <li><a href="#">About</a></li>
+                <li><div class="dropdown"><a href="#teams">About</a>
+                    <div class="dropdown-content">
+                        <a href="../html/sponsors.html"><p>Sponsors</p></a>
+                        <a href="../html/aboutUs.html"><p>About us</p></a>
+                    </div>
+                </div>
+                </li>
             
             </ul>
         </nav>
@@ -162,7 +182,7 @@
             <div class="email-box">
                 <i class="fa-regular fa-envelope"></i>
                 <input class="tbox" type="email" placeholder="Enter your email">
-                <button class="btn" type="button" name="button">Subscribe</button>
+                <button class="btn" type="button" name="button" onclick="potpisiSe()">Subscribe</button>
             </div>
         </form>
     </div>
@@ -172,30 +192,28 @@
         <div class="container">
             <div class="row">
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4>General</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">about us</a></li>
+                        <li><a href="../html/index.html">Home</a></li>
+                        <li><a href="../html/shop.html">Shop</a></li>
+                        <li><a href="../html/news.html">News</a></li>
+                        <li><a href="../html/index.html#teams">Teams</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4>Teams</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">about us</a></li>
+                        <li><a href="../html/lol.html">Lol</a></li>
+                        <li><a href="../html/valorant.html">Valorant</a></li>
+                        <li><a href="../html/csgo.html">CS:GO</a></li>
+                        <li><a href="../html/tft.html">TFT</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4>About</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">about us</a></li>
+                        <li><a href="../html/aboutUs.html">About us</a></li>
+                        <li><a href="../html/sponsors.html">Sponsors</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -220,5 +238,7 @@
 <script src="../js/shop.js"></script>
 <script src="../js/test.js"></script>
 <script src="../js/strimovi.js"></script>
+<script src="../js/news.js"></script>
+<script src="../js/phpInterface.js"></script>
 </body>
 </html>

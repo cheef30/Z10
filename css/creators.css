@@ -221,6 +221,7 @@ p
 {
     color: black;
 }
+
 @media screen and (max-width: 980px) { 
 .container {
     height: 100%;
@@ -233,7 +234,7 @@ p
 }
     .hide1
     {
-        display: none;
+        display: block;
     }
     .hide2
     {

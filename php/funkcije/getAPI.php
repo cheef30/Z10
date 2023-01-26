@@ -27,8 +27,9 @@ if (!isset($result[$err]))
         case 'mecevi':
             $str = $_GET['str'];
             $velStr = $_GET['velStr'];
-            $sortPo = $_GET['sortPo'];
-            $tipMeca = $_GET['tipMeca'];
+            $sortPo = null;
+            $tipMeca = null;
+            $idTakmicenja = null;
 
             $greska = '';
             if (!isset($str))
@@ -44,7 +45,16 @@ if (!isset($result[$err]))
                 break;
             }
 
-            $result[$res] = dohvatiMeceveSer($str, $velStr, $sortPo, $tipMeca);
+            if (isset($_GET['id_takmicenja']))
+                $idTakmicenja = $_GET['id_takmicenja'];
+
+            if (isset($_GET['sortPo']))
+                $sortPo = $_GET['sortPo'];
+
+            if (isset($_GET['tipMeca']))
+                $tipMeca = $_GET['tipMeca'];
+            
+            $result[$res] = dohvatiMeceveSer($str, $velStr, $sortPo, $tipMeca, $idTakmicenja);
             
             break;
         default:

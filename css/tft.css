@@ -11,9 +11,17 @@ body{
     position: relative;
     top: 200px;
 }
+.image{
+    width: 100%;
+}
+.image img{
+    position: relative;
+    width: 100%;
+}
 .newsletter{
     position: relative;
     top: 200px;
+    z-index: 0;
 }
 footer{
     position: relative;

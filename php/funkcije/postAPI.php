@@ -11,18 +11,19 @@ if (!isset($result[$err]))
     switch ($_GET[$obj]) {
         case 'mejl':
             if (empty($_POST['adresa'])) {
-                $result[$err] = 'Niste prosledili mejl adresu!';
+                $result[$err] = 'You didn\'t enter your email address!';
                 break;
             }
 
             $mejl = $_POST['adresa'];
 
             if (!filter_var($mejl, FILTER_VALIDATE_EMAIL)) {
-                $result[$err] = "Mejl '$mejl' nije u dobrom formatu!";
+                $result[$err] = "Mail address '$mejl' is not in mail format!";
                 break;
             }
 
-            $result[$res] = dodajPretplatnika($mejl);
+            dodajPretplatnika($mejl);
+            $result[$res] = 'You subscribed to newsletter!';
             break;
         default:
             $obj = $_GET[$obj];

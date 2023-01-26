@@ -10,7 +10,7 @@ async function get(parametri) {
     return data
 }
 
-async function post(reqBody, params) {
+async function post(params, reqBody) {
     const res = await fetch(`../php/funkcije/postAPI.php${queryPath(params)}`, {
         method: "POST",
         headers: {

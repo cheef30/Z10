@@ -13,10 +13,11 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <link rel="stylesheet" href="../css/navbar.css">
+    
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/newsletter.css">
     <link rel="stylesheet" href="../css/creators.css">
-    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/newsletter.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
                 <a href="../html/index.html"><img src="../images/z10logo.png"  alt=""></a>
             </label>
             <ul>
-                <li><a class="active" href="../html/index.html">Home</a></li>
+                <li><a class="active" href="#">Home</a></li>
                 <li><a href="../html/shop.html">Shop</a></li>
                 <li>
                     <div class="dropdown"><a href="#teams">Teams</a>
@@ -44,7 +45,13 @@
                     </div>
                 </li>
                 <li><a href="../html/news.html">News</a></li>
-                <li><a href="#">About</a></li>
+                <li><div class="dropdown"><a href="#teams">About</a>
+                    <div class="dropdown-content">
+                        <a href="../html/sponsors.html"><p>Sponsors</p></a>
+                        <a href="../html/aboutUs.html"><p>About us</p></a>
+                    </div>
+                </div>
+                </li>
             
             </ul>
         </nav>
@@ -158,50 +165,52 @@
         <div class="email-box">
             <i class="fa-regular fa-envelope"></i>
             <input class="tbox" type="email" placeholder="Enter your email">
-            <button class="btn" type="button" name="button">Subscribe</button>
+            <button class="btn" type="button" name="button" onclick="potpisiSe()">Subscribe</button>
         </div>
     </form>
 </div>
 
-
 <footer class="footer">
-    <div class="container-footer">
+    <div class="container">
         <div class="row">
             <div class="footer-col">
-                <h4>Company</h4>
+                <h4>General</h4>
                 <ul>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">about us</a></li>
+                    <li><a href="../html/index.html">Home</a></li>
+                    <li><a href="../html/shop.html">Shop</a></li>
+                    <li><a href="../html/news.html">News</a></li>
+                    <li><a href="../html/index.html#teams">Teams</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Company</h4>
+                <h4>Teams</h4>
                 <ul>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">about us</a></li>
+                    <li><a href="../html/lol.html">Lol</a></li>
+                    <li><a href="../html/valorant.html">Valorant</a></li>
+                    <li><a href="../html/csgo.html">CS:GO</a></li>
+                    <li><a href="../html/tft.html">TFT</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Company</h4>
+                <h4>About</h4>
                 <ul>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">about us</a></li>
+                    <li><a href="../html/aboutUs.html">About us</a></li>
+                    <li><a href="../html/sponsors.html">Sponsors</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Follow us</h4>
                 <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-
+                    <a target="_blank" href="https://www.instagram.com/zero_tenacity/"><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.twitch.tv/zerotenacity"><i class="fa-brands fa-twitch"></i></a>
+                    <a target="_blank" href="https://twitter.com/Z10esports"><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.twitch.tv/zerotenacity2"><i class="fa-brands fa-twitch"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@zerotenacity"><i class="fa-brands fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@z10tv/featured"><i class="fa-brands fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.tiktok.com/@zero_tenacity"><i class="fa-brands fa-tiktok"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/ZeroTenacity"><i class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://discord.gg/QUr2q2ct9C"><i class="fa-brands fa-discord"></i></a>
+                    <a target="_blank" href="https://www.reddit.com/r/ZeroTenacity/"><i class="fa-brands fa-reddit"></i></a>
                 </div>
             </div>
         </div>
@@ -209,5 +218,7 @@
 </footer>
 
 <script src="../js/navbar.js"></script>
+<script src="../js/news.js"></script>
+<script src="../js/phpInterface.js"></script>
 </body>
 </html>

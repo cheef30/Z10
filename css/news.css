@@ -503,6 +503,218 @@ body{
 
 }
 
+
+@media screen and (max-width: 1400px) {
+    .mecevi .matches .upcoming .matchInfo .left
+    {
+        margin-left: 15%;
+        margin-right: 30%;
+    }
+    .mecevi .matches .upcoming .matchInfo .right
+    {
+        margin-left: 5%;
+        margin-right: 9%;
+    }
+    .mecevi .matches .upcoming .slicice_dugme .slicice
+    {
+        margin-left: 33%;
+    }
+    .mecevi .matches .pastRes .matchInfo .left
+    {
+        margin-left: 15%;
+        margin-right: 30%;
+    }
+    .mecevi .matches .pastRes .matchInfo .right
+    {
+        margin-left: 5%;
+        margin-right: 9%;
+    }
+    .mecevi .matches .pastRes .slicice_dugme .slicice
+    {
+        margin-left: 33%;
+    }
+}
+@media screen and (max-width: 1100px) 
+{
+    .mecevi .matches .upcoming .slicice_dugme .slicice
+    {
+        margin-left: 30%;
+        top: -100px;
+    }
+    .mecevi .matches .upcoming .slicice_dugme .dugme{
+       margin-right: 13%;
+    }
+
+    .mecevi .matches .pastRes .slicice_dugme .slicice
+    {
+        margin-left: 30%;
+        top: -100px;
+    }
+    .mecevi .matches .pastRes .slicice_dugme .dugme{
+       margin-right: 13%;
+    }
+    .mini-title{
+        font-size: 20px !important;
+    }
+    .not-bold
+    {
+        font-size: 16px !important;
+    }
+}
+@media screen and (max-width: 920px) 
+{
+    .mecevi .matches .upcoming .slicice_dugme .slicice img
+    {
+        height: 110px;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    .mecevi .matches .upcoming .slicice_dugme .slicice{
+        top: -80px;
+    }
+    .mecevi .matches .upcoming .matchInfo .left
+    {
+        margin-right: 36%;
+    }
+    .mecevi .matches .upcoming .matchInfo .right
+    {
+        margin-left: 0;
+        margin-right: 0%;
+        width: 35%;
+    }
+    .mecevi .matches .upcoming .slicice_dugme .dugme{
+        margin-right: 7%;
+        width: 40%;
+     }
+
+
+
+
+
+     .mecevi .matches .pastRes .slicice_dugme .slicice img
+     {
+         height: 110px;
+         margin-left: 6%;
+         margin-right: 6%;
+     }
+     .mecevi .matches .pastRes .slicice_dugme .slicice{
+         top: -80px;
+     }
+     .mecevi .matches .pastRes .matchInfo .left
+     {
+         margin-right: 36%;
+     }
+     .mecevi .matches .pastRes .matchInfo .right
+     {
+         margin-left: 0;
+         margin-right: 0%;
+         width: 35%;
+     }
+     .mecevi .matches .pastRes .slicice_dugme .dugme{
+         margin-right: 7%;
+         width: 40%;
+      }
+    .mini-title{
+        font-size: 18px !important;
+    }
+    .not-bold
+    {
+        font-size: 15px !important;
+    }
+    #v{
+        font-size: 45px;
+    }
+    #s{
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 650px) 
+{
+    .mini-title{
+        font-size: 16px !important;
+    }
+    .not-bold
+    {
+        font-size: 12px !important;
+    }
+
+    .mecevi .matches .upcoming .matchInfo .left{
+        margin-top: -20px;
+        margin-left: 15%;
+        margin-right: 5%;
+    }
+    .mecevi .matches .upcoming .matchInfo .right{
+        margin-top: -10px;
+    }
+    .mecevi .matches .upcoming .slicice_dugme .slicice{
+        margin-left: 8%;
+        top: 10px;
+    }
+    .mecevi .matches .upcoming .slicice_dugme .slicice img{
+        margin-left: 2%;
+        margin-right: 2%;
+        height: 90px;
+    }
+    .mecevi .matches .upcoming .slicice_dugme{
+        height: 35% ;
+    }
+    .mecevi .matches .upcoming .slicice_dugme .dugme{
+        margin-right: 9%;
+        margin-top: 5%;
+    }
+
+    
+
+
+    .mecevi .matches .pastRes .matchInfo .left{
+        margin-top: -20px;
+        margin-left: 15%;
+        margin-right: 5%;
+    }
+    .mecevi .matches .pastRes .matchInfo .right{
+        margin-top: -10px;
+    }
+    .mecevi .matches .pastRes .slicice_dugme .slicice{
+        margin-left: 8%;
+        top: 10px;
+    }
+    .mecevi .matches .pastRes .slicice_dugme .slicice img{
+        margin-left: 2%;
+        margin-right: 2%;
+        height: 90px;
+    }
+    .mecevi .matches .pastRes .slicice_dugme{
+        height: 35% ;
+    }
+    .mecevi .matches .pastRes .slicice_dugme .dugme{
+        margin-right: 9%;
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .mecevi .matches .buttons button{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .mecevi .matches .upcoming .slicice_dugme .slicice{
+        margin-left: 2%;
+        top: 10px;
+    }
+    .mecevi .matches .upcoming .slicice_dugme .slicice img{
+        height: 80px;
+    }
+    .mecevi .matches .upcoming .slicice_dugme .dugme{
+        margin-right: 7%;
+    }
+    .text
+    {
+        font-size: 16px;
+    }
+}
+
+
+/*treba da se doradi responsive*/
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);

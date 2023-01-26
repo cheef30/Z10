@@ -25,17 +25,49 @@ function pastRes(){
 }
 
 function popuniDivove() {
-    popuniMeceve()
+    popuniMeceveSve()
     popuniVesti(1, velStranice)
 }
 
-function popuniMeceve() {
+function popuniMeceveSve() {
     let parametri = {
         objekat: 'mecevi',
         str: 1,
         velStr: 2,
         sortPo: "datum, vreme",
         tipMeca: 1
+    }
+    get(parametri).then((data) => {
+        let buduciMeceviDiv = document.getElementById('upcoming');
+
+        buduciMeceviDiv.innerHTML = '';
+
+        data.res.forEach(el => {
+            buduciMeceviDiv.innerHTML += matchInfoHTML(el)
+        });
+    })
+
+    parametri.sortPo = "datum desc, vreme desc"
+    parametri.tipMeca = 2
+    get(parametri).then((data) => {
+        let prosliMeceviDiv = document.getElementById('pastRes')
+
+        prosliMeceviDiv.innerHTML = ''
+
+        data.res.forEach(el => {
+            prosliMeceviDiv.innerHTML += matchInfoHTML(el)
+        })
+    })
+}
+
+function popuniMeceve(idTakmicenja) {
+    let parametri = {
+        objekat: 'mecevi',
+        str: 1,
+        velStr: 5,
+        sortPo: "datum, vreme",
+        tipMeca: 1,
+        id_takmicenja: idTakmicenja
     }
     get(parametri).then((data) => {
         let buduciMeceviDiv = document.getElementById('upcoming');
@@ -72,6 +104,7 @@ function matchInfoHTML(el) {
     if (el.mec.timoviRezultati.length == 1){
         el.mec.timoviRezultati.push(el.mec.timoviRezultati[0])
     }
+    console.log(el.mec)
 
     let istiTim = el.mec.timoviRezultati[0].tim.id == el.mec.timoviRezultati[1].tim.id
 
@@ -192,4 +225,27 @@ function stranica(pomeraj) {
         return
 
     popuniVesti(str, velStranice, false)
+}
+
+function potpisiSe() {
+    let mejlInput = document.getElementsByClassName('tbox')[0]
+    let mejl = mejlInput.value
+
+    let params = {
+        objekat: 'mejl'
+    }
+    let telo = {
+        adresa: mejl
+    }
+    post(params, telo).then((data) => {
+        if (data.err != undefined)
+        {
+            alert(data.err)
+        }
+        else
+        {
+            alert(data.res)
+            mejlInput.value = ''
+        }
+    })
 }
