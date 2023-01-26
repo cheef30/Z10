@@ -8,29 +8,38 @@ body{
 }
 
 .dva{
-  background-image: url(../images/cjoffo1.png);
+  background-image: url(../images/valo1.png);
 }
 .tri{
-  background-image: url(../images/fajkus1.png);
+  background-image: url(../images/valo3.png);
 }
 .cetri{
-  background-image: url(../images/brutmonster1.png);
+  background-image: url(../images/valo4.png);
 }
 .pet{
-  background-image: url(../images/avnn1.png);
+  background-image: url(../images/valo5.png);
 }
 .sest{
-  background-image: url(../images/simke1.png);
+  background-image: url(../images/valo6.png);
 }
 
 .mecevi{
   position: relative;
   top: 200px;
 }
+.image{
+  width: 100%;
+}
+.image img{
+  position: relative;
+  width: 100%;
+}
 .newsletter{
   position: relative;
   top: 200px;
+  z-index: 0;
 }
+
 footer{
   position: relative;
   top: 200px;
