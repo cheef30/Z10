@@ -86,7 +86,7 @@ if (bgMusicURL) {
 }
 
 // setup events
-document.onpointerdown = function (e) {
+document.getElementsByClassName('shop')[0].onpointerdown = function (e) {
   clearInterval(odrag.timer);
   e = e || window.event;
   var sX = e.clientX,

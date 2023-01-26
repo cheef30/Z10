@@ -5,3 +5,13 @@
 h1 {
     font-family: 'Oswald', sans-serif;
 }
+.vesti {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}
+.lastNew {
+    font-family: 'Oswald', sans-serif;
+}
+#brStr {
+    font-family: 'Courier New', Courier, monospace;
+}

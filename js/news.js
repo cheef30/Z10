@@ -209,7 +209,7 @@ function popuniVesti(stranica, velicinaStranice, postaviNajnoviji = true) {
                     <a target="_blank" href="${el.link}"><img src="../images/vesti/${el.putanjaSlike}" alt=""></a>
                 </div>
                 <div class="naslov">
-                <h4>${kraciNaslov(el.naslov, 56)}</h4>
+                <h4>${kraciNaslov(el.naslov, 46)}</h4>
                 </div>
             </div>
             `
