@@ -29,7 +29,7 @@ function strimovi(token){
   })
   .catch(error=>console.log(error))
 }
-const strimeri = ['z10hebihime','xjackiethedevilx','zerotenacity', 'iamninna' , 'komedyja', 'sto1etv','asaiika','z10_okami', 'sef30', 'zerotenacity2', 'komedyja', 'raqacsgo', 'l2plelouch', 'traviscwat', 'ben1hime', 'z10razor', 'nowycolor', 'ryuzaki1v9', 'slowwwq', 'kr_noah7', 'tkdgus6307', 'xitsha', 'jasvlr', 'kenob1g']
+const strimeri = ['z10hebihime','xjackiethedevilx','zerotenacity', 'iamninna' , 'komedyja', 'sto1etv','asaiika','z10_okami', 'sef30', 'zerotenacity2', 'komedyja', 'raqacsgo', 'l2plelouch', 'traviscwat', 'ben1hime', 'z10razor', 'nowycolor', 'ryuzaki1v9', 'slowwwq', 'kr_noah7', 'tkdgus6307', 'xitsha', 'jasvlr', 'kenob1g','cct_en']
 function getToken(){
   let url = `https://id.twitch.tv/oauth2/token?client_id=${clientID}&client_secret=${secret}&grant_type=client_credentials`
   let parametri = {

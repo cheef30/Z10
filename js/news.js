@@ -122,6 +122,16 @@ function matchInfoHTML(el) {
         }
     }
 
+    let slicice = `
+        <img class="up" src="../images/logos/${el.mec.timoviRezultati[0].tim.logo}" alt="">
+        ${rezDeo}
+    `
+
+    if (!istiTim)
+        slicice += `<img class="down" src="../images/logos/${el.mec.timoviRezultati[1].tim.logo}" alt="">`
+    else
+        slicice += `<img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" />`
+
     return `
     <div class="matchInfo">
         <div class="left">
@@ -133,9 +143,7 @@ function matchInfoHTML(el) {
     </div>
     <div class="slicice_dugme">
         <div class="slicice">
-            <img class="up" src="../images/logos/${el.mec.timoviRezultati[0].tim.logo}" alt="">
-            ${rezDeo}
-            <img class="down" src="../images/logos/${el.mec.timoviRezultati[1].tim.logo}" alt="">
+            ${slicice}
         </div>
         <div class="dugme">
             <div>
