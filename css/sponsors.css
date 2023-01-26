@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Oswald:wght@700&family=Poppins:wght@600&display=swap');
 body{
     background-color: #101010;
     margin: 0;
@@ -25,6 +26,7 @@ header{
     height: 70vh;
     align-items: center;
     padding: 50px 0px 50px 0px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .sponsors .sponsor{
