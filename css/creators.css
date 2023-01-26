@@ -14,10 +14,14 @@ body{
     text-align: center;
 }
 
+.center{
+    width: 100%;
+    height: 600px;
+}
+
 .center img{
     width: 100%;
-    height: 10%;
-    margin-top: 10%;
+    height: 100%;
 }
 .container {
     height: 100%;
@@ -221,7 +225,6 @@ p
 {
     color: black;
 }
-
 @media screen and (max-width: 980px) { 
 .container {
     height: 100%;
@@ -234,7 +237,7 @@ p
 }
     .hide1
     {
-        display: block;
+        display: none;
     }
     .hide2
     {

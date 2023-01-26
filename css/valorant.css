@@ -8,7 +8,7 @@ body{
 }
 
 .dva{
-  background-image: url(../images/valo1.png);
+  background-image: url(../images/valo6.png);
 }
 .tri{
   background-image: url(../images/valo3.png);
@@ -17,11 +17,14 @@ body{
   background-image: url(../images/valo4.png);
 }
 .pet{
-  background-image: url(../images/valo5.png);
+  background-image: url(../images/valo1.png);
 }
 .sest{
-  background-image: url(../images/valo6.png);
+  background-image: url(../images/Plan_de_travail_1.png);
 }
+
+
+
 
 .mecevi{
   position: relative;
