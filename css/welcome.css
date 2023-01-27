@@ -412,7 +412,9 @@ table .dole p {
   .teams .team .team-card{
     width: 30%;
   }
-
+  .shop {
+    display: none;
+  }
 }
 @media only screen and (max-width: 650px){
   .teams h1{

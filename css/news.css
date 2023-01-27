@@ -965,6 +965,7 @@ body{
 .newsletter{
   position: relative;
   top: 300px;
+  z-index: 0;
 }
 
 

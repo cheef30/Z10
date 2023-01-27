@@ -196,12 +196,13 @@ function popuniVesti(stranica, velicinaStranice, postaviNajnoviji = true) {
             let newest = document.getElementsByClassName('lastNew')[0]
             newest.innerHTML = `
             <div class="image">
-                <img src="../images/vesti/${data.res[0].putanjaSlike}" alt="">
-                <h1>${kraciNaslov(data.res[0].naslov, 66)}</h1>
+                <a target="_blank" href="${data.res[0].link}"><img src="../images/vesti/${data.res[0].putanjaSlike}" alt=""></a>
+                <h1>${kraciNaslov(data.res[0].naslov, duzinaTeksta(25))}</h1>
             </div>
             `
         }
 
+        let maksDuzina = duzinaTeksta(40)
         data.res.forEach(el => {
             wrapper.innerHTML += `
             <div class="kartica">
@@ -209,7 +210,7 @@ function popuniVesti(stranica, velicinaStranice, postaviNajnoviji = true) {
                     <a target="_blank" href="${el.link}"><img src="../images/vesti/${el.putanjaSlike}" alt=""></a>
                 </div>
                 <div class="naslov">
-                <h4>${kraciNaslov(el.naslov, 46)}</h4>
+                <h4>${kraciNaslov(el.naslov, maksDuzina)}</h4>
                 </div>
             </div>
             `
@@ -256,4 +257,8 @@ function potpisiSe() {
             mejlInput.value = ''
         }
     })
+}
+
+function duzinaTeksta(modifikator) {
+    return window.innerWidth / modifikator
 }
