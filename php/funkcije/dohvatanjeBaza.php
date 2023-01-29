@@ -138,6 +138,22 @@ function dohvatiMeceveSve($str, $velStr, $sortPo, $tipMeca, $idTakmicenja) {
     }
 }
 
+function dohvatiMec($id) {
+    try {
+        $baza = new Baza();
+        $rez = $baza->selectOne("select m.*, t.NAZIV AS NAZIV_TAKMICENJA, i.naziv as NAZIV_IGRE
+        from mec m
+            join takmicenje t on t.id = m.ID_TAKMICENJA
+            join igra i on i.id = t.id_igre
+        where m.id = $id\n");
+
+        return $rez;
+    }
+    catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
 function dohvatiTimoveRezultateZaMec($idMeca) {
     try {
         $baza = new Baza();
@@ -170,6 +186,19 @@ function dohvatiKorisnika($korIme, $lozinka) {
         $red = $baza->selectOne("select * from korisnici where KORISNICKO_IME = '$korIme' and LOZINKA = '$lozinka'");
 
         return $red;
+    }
+    catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
+function dohvatiMejlove()
+{
+    try {
+        $baza = new Baza();
+        $rez = $baza->selectAll("select * from mail_pretplatnici_vesti");
+
+        return $rez;
     }
     catch (Exception $e) {
         return $e->getMessage();

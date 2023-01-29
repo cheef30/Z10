@@ -4,9 +4,7 @@ function navbar() {
     <ul>
         <li><a href="pocetna.php">Početna</a></li>
         <li><a href="igre.php">Igre</a></li>
-        <li><a href="">Takmičenja</a></li>
-        <li><a href="">Timovi</a></li>
-        <li><a href="">Mečevi</a></li>
+        <li><a href="mecevi.php">Mečevi</a></li>
         <li><a href="vesti.php">Vesti</a></li>
         <li><a href="mejlovi.php">Mejlovi</a></li>
         <li><a href="odjava.php">Odjava</a></li>

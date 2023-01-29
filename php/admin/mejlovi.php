@@ -27,7 +27,22 @@ if (!isset($_SESSION['korIme'])) {
             <th>Mejl adresa</th>
         </thead>
         <tbody>
-            
+            <?php
+                include_once dirname(__DIR__) . '/funkcije/dohvatanjeBaza.php';
+
+                $mejlovi = dohvatiMejlove();
+
+                while ($mejl = $mejlovi->fetch_assoc()) {
+                    $id = $mejl['ID'];
+                    $adresa = $mejl['MEJL_ADRESA'];
+
+                    echo "
+                        <tr>
+                            <td>$id</td>
+                            <td>$adresa</td>
+                        </tr>";
+                }
+            ?>
         </tbody>
     </table>
 </body>
