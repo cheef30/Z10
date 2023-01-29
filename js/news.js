@@ -104,7 +104,6 @@ function matchInfoHTML(el) {
     if (el.mec.timoviRezultati.length == 1){
         el.mec.timoviRezultati.push(el.mec.timoviRezultati[0])
     }
-    console.log(el.mec)
 
     let istiTim = el.mec.timoviRezultati[0].tim.id == el.mec.timoviRezultati[1].tim.id
 

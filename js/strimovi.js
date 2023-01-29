@@ -20,7 +20,6 @@ function strimovi(token){
    strimoviContainer.innerHTML = '';
     res.data.forEach(element => {
       fetch(`https://api.twitch.tv/helix/users?id=${element.user_id}`, parametri).then(data=>{return data.json()}).then(user=>{
-        console.log(user)
         strimoviContainer.innerHTML+=strimhtml(user.data[0].profile_image_url, element.user_name, element.viewer_count)
 
       }).catch(error=>console.log(error))

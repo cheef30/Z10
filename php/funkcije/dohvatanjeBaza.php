@@ -1,15 +1,15 @@
 <?php
 include_once dirname(__DIR__) . '/klase/baza/baza.php';
 
-enum TipMeca: int {
+/*enum TipMeca: int {
     case BUDUCI = 1;
     case PROSLI = 2;
-}
+}*/
 
 function dohvatiSveVesti() {
     try {
         $baza = new Baza();
-        $rez = $baza->selectAll('select * from VEST');
+        $rez = $baza->selectAll('select * from vest');
 
         return $rez;
     }
@@ -27,7 +27,7 @@ function dohvatiVesti($str, $velStr) {
             $str = $maxStr;*/
 
         $offset = $velStr * ($str - 1);
-        $rez = $baza->selectAll("select * from VEST order by DATUM_VREME_UNOSA desc limit $offset, $velStr");
+        $rez = $baza->selectAll("select * from vest order by DATUM_VREME_UNOSA desc limit $offset, $velStr");
 
         return $rez;
     }
@@ -39,7 +39,7 @@ function dohvatiVesti($str, $velStr) {
 function dohvatiTakmicenja() {
     try {
         $baza = new Baza();
-        $rez = $baza->selectAll("select t.*, i.NAZIV as NAZIV_IGRE from TAKMICENJE t join IGRA i on t.ID_IGRE = i.ID");
+        $rez = $baza->selectAll("select t.*, i.NAZIV as NAZIV_IGRE from takmicenje t join IGRA i on t.ID_IGRE = i.ID");
 
         return $rez;
     }
@@ -51,7 +51,7 @@ function dohvatiTakmicenja() {
 function dohvatiTakmicenjePoNazivu($naziv) {
     try {
         $baza = new Baza();
-        $red = $baza->selectOne("select * from TAKMICENJE where NAZIV = '$naziv'");
+        $red = $baza->selectOne("select * from takmicenje where NAZIV = '$naziv'");
 
         return $red;
     }
@@ -63,7 +63,7 @@ function dohvatiTakmicenjePoNazivu($naziv) {
 function dohvatiIgre() {
     try {
         $baza = new Baza();
-        $rez = $baza->selectAll("select * from IGRA");
+        $rez = $baza->selectAll("select * from igra");
 
         return $rez;
     }
@@ -75,7 +75,7 @@ function dohvatiIgre() {
 function dohvatiIgru($idIgre) {
     try {
         $baza = new Baza();
-        $red = $baza->selectOne("select * from IGRA where ID = $idIgre");
+        $red = $baza->selectOne("select * from igra where ID = $idIgre");
 
         return $red;
     }
@@ -87,7 +87,7 @@ function dohvatiIgru($idIgre) {
 function dohvatiMeceveZaTakmicenje($idTakmicenja) {
     try {
         $baza = new Baza();
-        $rez = $baza->selectAll("select * from MEC where ID_TAKMICENJA = $idTakmicenja ORDER BY DATUM, VREME");
+        $rez = $baza->selectAll("select * from mec where ID_TAKMICENJA = $idTakmicenja ORDER BY DATUM, VREME");
 
         return $rez;
     }
@@ -100,7 +100,7 @@ function dohvatiMeceveSve($str, $velStr, $sortPo, $tipMeca, $idTakmicenja) {
     try {
         $baza = new Baza();
 
-        $ukupno = $baza->selectOne('select count(*) as ukupno from MEC')['ukupno'];
+        $ukupno = $baza->selectOne('select count(*) as ukupno from mec')['ukupno'];
         if ($str > $maxStr = round($ukupno / $velStr, 0, PHP_ROUND_HALF_UP))
             $str = $maxStr;
 
@@ -141,7 +141,7 @@ function dohvatiMeceveSve($str, $velStr, $sortPo, $tipMeca, $idTakmicenja) {
 function dohvatiTimoveRezultateZaMec($idMeca) {
     try {
         $baza = new Baza();
-        $rez = $baza->selectAll("select * from TIM_MEC where ID_MECA = $idMeca");
+        $rez = $baza->selectAll("select * from tim_mec where ID_MECA = $idMeca");
 
         return $rez;
     }
@@ -153,7 +153,7 @@ function dohvatiTimoveRezultateZaMec($idMeca) {
 function dohvatiTim($idTima) {
     try {
         $baza = new Baza();
-        $red = $baza->selectOne("select * from TIM where ID = $idTima");
+        $red = $baza->selectOne("select * from tim where ID = $idTima");
 
         return $red;
     }
@@ -167,7 +167,7 @@ function dohvatiKorisnika($korIme, $lozinka) {
         $baza = new Baza();
 
         $lozinka = md5($lozinka);
-        $red = $baza->selectOne("select * from KORISNICI where KORISNICKO_IME = '$korIme' and LOZINKA = '$lozinka'");
+        $red = $baza->selectOne("select * from korisnici where KORISNICKO_IME = '$korIme' and LOZINKA = '$lozinka'");
 
         return $red;
     }

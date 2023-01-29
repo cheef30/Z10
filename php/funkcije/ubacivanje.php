@@ -5,13 +5,13 @@ function dodajPretplatnika($mejl) {
     $mejl = trim($mejl);
     $baza = new Baza();
 
-    return $baza->executeNonQuery("INSERT IGNORE INTO MAIL_PRETPLATNICI_VESTI (MEJL_ADRESA) VALUES ('$mejl')");
+    return $baza->executeNonQuery("INSERT IGNORE INTO mail_pretplatnici_vesti (MEJL_ADRESA) VALUES ('$mejl')");
 }
 
 function dodajIgru($naziv) {
     $baza = new Baza();
 
-    return $baza->executeNonQuery("INSERT INTO IGRA (NAZIV) VALUES ('$naziv')");
+    return $baza->executeNonQuery("INSERT INTO igra (NAZIV) VALUES ('$naziv')");
 }
 
 function dodajVest($naslov, $slika, $link) {
@@ -19,5 +19,5 @@ function dodajVest($naslov, $slika, $link) {
 
     $naslov = str_replace('\'', '\\\'', $naslov);
 
-    return $baza->executeNonQuery("INSERT INTO VEST (NASLOV, SLIKA, LINK) VALUES ('$naslov', '$slika', '$link')");
+    return $baza->executeNonQuery("INSERT INTO vest (NASLOV, SLIKA, LINK) VALUES ('$naslov', '$slika', '$link')");
 }

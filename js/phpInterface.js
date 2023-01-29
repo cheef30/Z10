@@ -20,7 +20,6 @@ async function post(params, reqBody) {
     })
 
     const data = await res.json();
-    console.log(data)
     return data;
 }
 
