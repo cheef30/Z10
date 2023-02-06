@@ -48,7 +48,7 @@ function serTakmicenjeIzBaze($red) {
 }
 
 function serMecIzBaze($red) {
-    $mec = new Mec($red['ID'], dohvatiTimoveRezultateZaMecSer($red['ID']), $red['DATUM'], $red['VREME']);
+    $mec = new Mec($red['ID'], dohvatiTimoveRezultateZaMecSer($red['ID']), $red['DATUM'], $red['VREME'], $red['LINK']);
 
     return $mec;
 }

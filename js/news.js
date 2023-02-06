@@ -146,7 +146,7 @@ function matchInfoHTML(el) {
         </div>
         <div class="dugme">
             <div>
-                <a href="#">
+                <a href="${el.mec.link}" target="_blank">
                     <p>
                         <span class="bg"></span>
                         <span class="base"></span>

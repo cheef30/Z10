@@ -11,10 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $rezultati = $_POST['rezultat'];
     $idjevi = $_POST['id'];
     $idMeca = $_POST['idMeca'];
+    $link = $_POST['link'];
 
     for ($i=0; $i < count($idjevi); $i++) { 
         azurirajRezultat($idjevi[$i], $rezultati[$i]);
     }
+
+    azurirajLinkMeca($idMeca, $link);
 
     header("Location: rezultat.php?idMeca=$idMeca");
     die();
@@ -46,6 +49,7 @@ $id = $_GET['idMeca'];
         $nazivTakmicenja = $mecTakmicenjeIgra->nazivTakmicenja;
         $datum = $mecTakmicenjeIgra->mec->datum;
         $vreme = $mecTakmicenjeIgra->mec->vreme;
+        $link = $mecTakmicenjeIgra->mec->link;
 
         echo "<h4>$nazivIgre</h4>
             <h4>$nazivTakmicenja</h4>
@@ -65,8 +69,10 @@ $id = $_GET['idMeca'];
                     <p><b>$nazivTima</b>, rezultat:<input name='rezultat[]' type='number' value=$rezultat><input name='id[]' type='hidden' value=$idTimRez></p>
                 ";
             }
+
+            echo "<label for='link'>Link za gledanje meca:</label><input type='text' id='link' name='link' value=$link><br>";
         ?>
-        <button type="submit">Izmeni rezultat</button>
+        <button type="submit">Izmeni</button>
     </form>
 </body>
 </html>

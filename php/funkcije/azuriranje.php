@@ -6,3 +6,9 @@ function azurirajRezultat($id, $rezultat) {
 
     return $baza->executeNonQuery("UPDATE tim_mec SET REZULTAT=$rezultat WHERE ID=$id");
 }
+
+function azurirajLinkMeca($idMeca, $link) {
+    $baza = new Baza();
+
+    return $baza->executeNonQuery("UPDATE mec SET LINK='$link' WHERE ID = $idMeca");
+}

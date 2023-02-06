@@ -6,13 +6,15 @@ class Mec implements MyJson {
     public $timoviRezultati;
     public $datum;
     public $vreme;
+    public $link;
 
-    public function __construct($id, $timoviRezultati, $datum, $vreme)
+    public function __construct($id, $timoviRezultati, $datum, $vreme, $link)
     {
         $this->id = $id;
         $this->timoviRezultati = $timoviRezultati;
         $this->datum = $datum;
         $this->vreme = $vreme;
+        $this->link = $link;
     }
 
     public function AsJSON()

@@ -29,6 +29,7 @@ if (!isset($_SESSION['korIme'])) {
             <th>Igra</th>
             <th>Datum</th>
             <th>Vreme</th>
+            <th>Link</th>
         </thead>
         <tbody>
             <?php
@@ -40,6 +41,7 @@ if (!isset($_SESSION['korIme'])) {
                     $idMeca = $mecTakmicenjeIgra->mec->id;
                     $datum = $mecTakmicenjeIgra->mec->datum;
                     $vreme = $mecTakmicenjeIgra->mec->vreme;
+                    $link = $mecTakmicenjeIgra->mec->link;
                     $ispisTimova = vratiIspisTimova($mecTakmicenjeIgra->mec->timoviRezultati);
                     $nazivTakmicenja = $mecTakmicenjeIgra->nazivTakmicenja;
                     $nazivIgre = $mecTakmicenjeIgra->nazivIgre;
@@ -52,6 +54,7 @@ if (!isset($_SESSION['korIme'])) {
                             <td>$nazivIgre</td>
                             <td>$datum</td>
                             <td>$vreme</td>
+                            <td><a href='$link' target='_blank'>$link</a></td>
                             <td><a href='rezultat.php?idMeca=$idMeca'>Izmeni rezultat</a></td>
                         </tr>
                     ";
