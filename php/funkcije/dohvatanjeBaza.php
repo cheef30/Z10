@@ -36,6 +36,29 @@ function dohvatiVesti($str, $velStr) {
     }
 }
 
+function dohvatiYTVidee($str, $velStr, $idKanala) {
+    try {
+        $baza = new Baza();
+
+        $offset = $velStr * ($str - 1);
+
+        $upit = "select * from ytvideo";
+
+        if (isset($idKanala)) {
+            $upit .= " where ID_YT_KANALA = '$idKanala'";
+        }
+
+        $upit .= " order by DATUM_VREME_POSTAVLJANJA desc limit $offset, $velStr";
+
+        $rez = $baza->selectAll($upit);
+
+        return $rez;
+    }
+    catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
 function dohvatiTakmicenja() {
     try {
         $baza = new Baza();
@@ -197,6 +220,18 @@ function dohvatiMejlove()
     try {
         $baza = new Baza();
         $rez = $baza->selectAll("select * from mail_pretplatnici_vesti");
+
+        return $rez;
+    }
+    catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
+function dohvatiVrednostParametra($kljuc) {
+    try {
+        $baza = new Baza();
+        $rez = $baza->selectOne("select VREDNOST from parametri where KLJUC = '$kljuc'")['VREDNOST'];
 
         return $rez;
     }

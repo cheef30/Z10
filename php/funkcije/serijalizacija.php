@@ -100,3 +100,19 @@ function serTimIzBaze($red) {
 
     return $tim;
 }
+
+function serViseYTVidIzBaze($rezUpita) {
+    $ytVideos = array();
+
+    while ($red = $rezUpita->fetch_assoc()) {
+        array_push($ytVideos, serYTVidIzBaze($red));
+    }
+
+    return $ytVideos;
+}
+
+function serYTVidIzBaze($red) {
+    $ytVideo = new YTVideo($red['ID'], $red['DATUM_VREME_POSTAVLJANJA'], $red['ID_YT_KANALA']);
+
+    return $ytVideo;
+}

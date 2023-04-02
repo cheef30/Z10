@@ -21,3 +21,13 @@ function dodajVest($naslov, $slika, $link) {
 
     return $baza->executeNonQuery("INSERT INTO vest (NASLOV, SLIKA, LINK) VALUES ('$naslov', '$slika', '$link')");
 }
+
+function dodajYTVideo($ytVideo) {
+    $id = $ytVideo->id;
+    $datumVreme = $ytVideo->dateTime;
+    $idKanala = $ytVideo->channelId;
+
+    $baza = new Baza();
+    
+    return $baza->executeNonQuery("INSERT IGNORE INTO ytvideo (ID, DATUM_VREME_POSTAVLJANJA, ID_YT_KANALA) VALUES ('$id', '$datumVreme', '$idKanala')");
+}

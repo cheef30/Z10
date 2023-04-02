@@ -1,5 +1,10 @@
 const velStranice = 12
 
+const z10ChannelId = 'UCdkbbtR6T0wZET5_WCI6ADg'
+const z10TvChannelId = 'UCfahEFFOgfwQLtjABLI1ekA'
+
+let currentChannelId
+
 function upcoming(){
     var upcomingMatches = document.getElementById("upcoming")
     var pastResMatches = document.getElementById("pastRes")
@@ -25,6 +30,8 @@ function pastRes(){
 }
 
 function popuniDivove() {
+    currentChannelId = z10ChannelId
+
     popuniMeceveSve()
     popuniVesti(1, velStranice)
 }
@@ -179,9 +186,10 @@ function popuniVesti(stranica, velicinaStranice, postaviNajnoviji = true) {
     let brStrEl = document.getElementById('brStr')
 
     let parametri = {
-        objekat: 'vesti',
+        objekat: 'yt',
         str: stranica,
-        velStr: velicinaStranice
+        velStr: velicinaStranice,
+        idKanala: currentChannelId
     }
     get(parametri).then((data) => {
         if (data.res.length == 0)
@@ -193,30 +201,34 @@ function popuniVesti(stranica, velicinaStranice, postaviNajnoviji = true) {
         if (postaviNajnoviji)
         {
             let newest = document.getElementsByClassName('lastNew')[0]
-            newest.innerHTML = `
+            /*newest.innerHTML = `
             <div class="image">
                 <a target="_blank" href="${data.res[0].link}"><img src="../images/vesti/${data.res[0].putanjaSlike}" alt=""></a>
                 <h1>${kraciNaslov(data.res[0].naslov, duzinaTeksta(25))}</h1>
             </div>
-            `
+            `*/
+
+            newest.innerHTML = `<div class="image">
+            ${embedVideoIframe(data.res[0].id)}</div>`
         }
 
         let maksDuzina = duzinaTeksta(40)
         data.res.forEach(el => {
             wrapper.innerHTML += `
             <div class="kartica">
-                <div class="slika">
-                    <a target="_blank" href="${el.link}"><img src="../images/vesti/${el.putanjaSlike}" alt=""></a>
-                </div>
-                <div class="naslov">
-                <h4>${kraciNaslov(el.naslov, maksDuzina)}</h4>
-                </div>
+                ${embedVideoIframe(el.id)}
             </div>
             `
         });
 
         brStrEl.innerHTML = stranica
     })
+}
+
+function videiKanala(channelId) {
+    currentChannelId = channelId
+
+    popuniVesti(1, velStranice)
 }
 
 function kraciNaslov(naslov, maksDuzina) {
@@ -260,4 +272,8 @@ function potpisiSe() {
 
 function duzinaTeksta(modifikator) {
     return window.innerWidth / modifikator
+}
+
+function embedVideoIframe(videoId) {
+    return `<iframe width=100% height=100% src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
 }

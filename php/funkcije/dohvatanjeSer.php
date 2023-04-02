@@ -47,3 +47,7 @@ function dohvatiSveVestiSer() {
 function dohvatiIgreSer() {
     return serViseIgaraIzBaze(dohvatiIgre());
 }
+
+function dohvatiYTVidSer($str, $velStr, $idKanala) {
+    return serViseYTVidIzBaze(dohvatiYTVidee($str, $velStr, $idKanala));
+}

@@ -12,3 +12,9 @@ function azurirajLinkMeca($idMeca, $link) {
 
     return $baza->executeNonQuery("UPDATE mec SET LINK='$link' WHERE ID = $idMeca");
 }
+
+function azurirajParametar($kljuc, $novaVrednost) {
+    $baza = new Baza();
+
+    return $baza->executeNonQuery("UPDATE parametri SET VREDNOST = '$novaVrednost' WHERE KLJUC = '$kljuc'");
+}
