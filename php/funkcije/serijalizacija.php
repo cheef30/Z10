@@ -6,6 +6,7 @@ include dirname(__DIR__) . '/klase/modeli/mec.php';
 include dirname(__DIR__) . '/klase/modeli/tim.php';
 include dirname(__DIR__) . '/klase/modeli/timRezultat.php';
 include_once dirname(__DIR__) . '/klase/modeli/mecTakmicenjeIgra.php';
+include_once dirname(__DIR__) . '/klase/modeli/korisnik.php';
 include_once 'dohvatanjeBaza.php';
 include_once 'dohvatanjeSer.php';
 
@@ -115,4 +116,10 @@ function serYTVidIzBaze($red) {
     $ytVideo = new YTVideo($red['ID'], $red['DATUM_VREME_POSTAVLJANJA'], $red['ID_YT_KANALA']);
 
     return $ytVideo;
+}
+
+function serKorisnikaIzBaze($red) {
+    $korisnik = new Korisnik($red['ID'], $red['MEJL_ADRESA'], $red['KORISNICKO_IME']);
+
+    return $korisnik;
 }

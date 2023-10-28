@@ -8,6 +8,16 @@ function dodajPretplatnika($mejl) {
     return $baza->executeNonQuery("INSERT IGNORE INTO mail_pretplatnici_vesti (MEJL_ADRESA) VALUES ('$mejl')");
 }
 
+function registrujKorisnika($mejl, $korIme, $lozinka) {
+    $mejl = trim($mejl);
+    $korIme = trim($korIme);
+    $lozinka = md5($lozinka);
+
+    $baza = new Baza();
+
+    return $baza->executeNonQuery("INSERT IGNORE INTO korisnici (MEJL_ADRESA, KORISNICKO_IME, LOZINKA) VALUES ('$mejl', '$korIme', '$lozinka')");
+}
+
 function dodajIgru($naziv) {
     $baza = new Baza();
 

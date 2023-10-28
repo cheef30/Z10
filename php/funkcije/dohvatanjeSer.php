@@ -51,3 +51,26 @@ function dohvatiIgreSer() {
 function dohvatiYTVidSer($str, $velStr, $idKanala) {
     return serViseYTVidIzBaze(dohvatiYTVidee($str, $velStr, $idKanala));
 }
+
+function dohvatiKorisnikaSer($korIme, $lozinka) {
+    $postoji = postojiKorisnikPoKorImenu($korIme);
+
+    if (is_string($postoji))
+        return $postoji;
+
+    if (!$postoji)
+        return "User '$korIme' is not registered!";
+
+    $rez = dohvatiKorisnika($korIme, $lozinka);
+
+    if (is_string($rez))
+        return $rez;
+
+    if (is_null($rez))
+        return "Wrong password!";
+
+    if (!$rez)
+        return "Login failed due to a database error!";
+
+    return serKorisnikaIzBaze($rez);
+}

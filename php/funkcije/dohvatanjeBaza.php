@@ -205,10 +205,52 @@ function dohvatiKorisnika($korIme, $lozinka) {
     try {
         $baza = new Baza();
 
+        $korIme = trim($korIme);
         $lozinka = md5($lozinka);
         $red = $baza->selectOne("select * from korisnici where KORISNICKO_IME = '$korIme' and LOZINKA = '$lozinka'");
 
         return $red;
+    }
+    catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
+function postojiKorisnik($mejl, $korIme) {
+    try {
+        $baza = new Baza();
+
+        $mejl = trim($mejl);
+        $korIme = trim($korIme);
+
+        $rezultat = $baza->selectOne("select 1 from korisnici where MEJL_ADRESA = '$mejl' or KORISNICKO_IME = '$korIme'");
+
+        if (is_null($rezultat) || $rezultat === false)
+            $rezultat = false;
+        else
+            $rezultat = true;
+
+        return $rezultat;
+    }
+    catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
+function postojiKorisnikPoKorImenu($korIme) {
+    try {
+        $baza = new Baza();
+
+        $korIme = trim($korIme);
+
+        $rezultat = $baza->selectOne("select 1 from korisnici where KORISNICKO_IME = '$korIme'");
+
+        if (is_null($rezultat) || $rezultat === false)
+            $rezultat = false;
+        else
+            $rezultat = true;
+
+        return $rezultat;
     }
     catch (Exception $e) {
         return $e->getMessage();
